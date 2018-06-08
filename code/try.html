@@ -1,0 +1,389 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>NA-AU-Home</title>
+<link href="try_files/styles.htm" rel="stylesheet" type="text/css">
+<style> div {display: block;} </style>
+<script type="text/javascript">
+function addImgAttributes()
+{
+var theImg = document.getElementById('theImgID');
+maxW = '300';
+maxH = '50';
+width = theImg.width;
+height = theImg.height;
+if( width == height )
+{
+   if (width > maxW )
+   {
+      nwidth = maxW;
+      nheight = maxW;
+   }
+   else
+   {
+      if (height > maxH )
+      {
+         nwidth = maxH;
+         nheight = maxH;
+      }
+      else
+      {
+         nwidth = width;
+         nheight = height;
+      }
+   }
+}
+else 
+{
+   if( width > height )
+   {
+      if (width > maxW )
+      {
+         nwidth = maxW;
+         nheight = height - height*((width - nwidth)/width);
+      }
+      else
+      {
+         if( height > maxH )
+         {
+            nheight = maxH;
+            nwidth = width - (width*((height - nheight)/height))
+         }
+         else
+         {
+            nwidth = width;
+            nheight = height;
+         }
+      }
+   }
+   else
+   {
+      if (height > maxH )
+      {
+         nheight = maxH;
+         nwidth = width - (width*((height - nheight)/height))
+      }
+      else
+      {
+         nwidth = width;
+         nheight = height;
+      }
+   }
+
+
+   theImg.setAttribute('width',nwidth);
+   theImg.setAttribute('style', 'width:',nwidth);
+   theImg.setAttribute('height',nheight);
+   theImg.setAttribute('style', 'height:',nheight);
+}
+}
+function togglerows(elementid) {
+   if( document.getElementById(elementid).style.display=='none' ){
+      document.getElementById(elementid).style.display = '';
+   }else{
+      document.getElementById(elementid).style.display = 'none';
+   }
+}
+</script>
+</head>
+<body onload="addImgAttributes()">
+<div style="width: 125px; text-align: center; vertical-align: middle; background-color: rgb(255,163,25); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;">
+<span style="font-size:14px;"><span style="color: rgb(255, 255, 255);"><a href="http://bp-partnermatrix.democentral.ibm.com/index.html" style="text-decoration:none"><span style="color: rgb(0,0,0);"><em>TOP Level</em></span></a></span></span></div>
+<table dir="ltr" style="width: 800px;" align="center" border="0">
+<tbody>
+<tr>
+<th style="width: 125px; text-align: center; vertical-align: middle; background-color: rgb(255,163,25); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;">
+<span style="font-size:14px;"><span style="color: rgb(255, 255, 255);"><a href="http://bp-partnermatrix.democentral.ibm.com/NA/AU/H/homeU.html" style="text-decoration:none"><span style="color: rgb(0,0,0)">Home</span></a></span></span></th>
+<th style="width: 125px; text-align: center; vertical-align: middle; background-color: rgb(255,163,25); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;">
+<span style="font-size:14px;"><a href="http://bp-partnermatrix.democentral.ibm.com/query_AU_eus.html" style="text-decoration:none">
+<span style="color: rgb(0,0,0);">Find a Partner</span></a></span></th>
+<th style="width: 125px; text-align: center; vertical-align: middle; background-color: rgb(255,163,25); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;">
+<span style="font-size:14px;"><span style="color: rgb(255, 255, 255);"><a href="http://bp-partnermatrix.democentral.ibm.com/NA/AU/H/menu_coverageU.html" style="text-decoration:none"><span style="color: rgb(0,0,0);">Coverage</span></a></span></span></th>
+<th style="width: 125px; text-align: center; vertical-align: middle; background-color: rgb(255,163,25); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;">
+<span style="font-size:14px;"><span style="color: rgb(255, 255, 255);"><a href="http://bp-partnermatrix.democentral.ibm.com/NA/AU/H/authorizationU.html" style="text-decoration:none"><span style="color: rgb(0,0,0);">Partner List</span></a></span></span></th>
+<th style="width: 125px; text-align: center; vertical-align: middle; background-color: rgb(255,163,25); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;">
+<span style="font-size:14px;"><a href="http://bp-partnermatrix.democentral.ibm.com/NA/AU/H/skillsU.html" style="text-decoration:none"> 
+<span style="color: rgb(0,0,0);">Skills</span></a></span></th>
+<th style="width: 125px; text-align: center; vertical-align: middle; background-color: rgb(255,163,25); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;">
+<span style="font-size:14px;"><a href="http://bp-partnermatrix.democentral.ibm.com/NA/AU/H/industriesU.html" style="text-decoration:none"> 
+<span style="color: rgb(0,0,0);">Markets</span></a></span></th>
+		</tr>
+	</tbody>
+</table>
+ 
+<div dir="ltr" style="text-align: center">
+<em><span style="font-size: 20px">UPDATE FORECAST </span></em></div>
+<div dir="ltr" style="text-align: center">
+<em><span style="font-size: 20px">North America</span></em></div>
+<p>
+</p><form id="fcast_upd" action="/cgi-bin/fcastDetailsUpdAU.ksh" method="post">
+<input name="form" readonly="readonly" value="975" type="hidden"><br>
+This action will update your Forecast.<br>
+<br><table>
+<input name="fcast_id" readonly="readonly" value="1" type="hidden">
+<tbody><tr>
+<td>Customer:</td><td><input size="60" name="cust_name" value="Deloitte" type="text"></td>
+<td>Partner:</td>
+<td><select name="ceid">
+<option>
+</option><option value="18z7gey8">Accenture / Proquire
+</option><option value="ztzfcbh">Capgemini US LLC
+</option><option value="18z7gnnr">Cognizant
+</option><option value="25qbxc9z">Computer Sciences Corporation (CSC)
+</option><option selected="selected" value="1nor0xti">Deloitte Inc.
+</option><option value="63def">HCL America, Inc.
+</option><option value="25i7tsrp">KPMG, LLP
+</option><option value="1rbq">Sogeti
+</option><option value="18z7gk4t">Tata Consultancy Services
+</option><option value="1j9ll5ja">Tech Mahindra Limited
+</option><option value="10aip0ym">TeraMach Technologies Inc.
+</option><option value="1gepxknb">Wipro Limited
+</option></select></td>
+<td>Partner Led:
+</td><td><select name="yn">
+<option>
+</option><option selected="selected">Y
+</option><option>N
+</option></select></td>
+<td>Partner Owned:</td>
+<td><select name="yn">
+<option selected="selected">
+</option><option>Y
+</option><option>N
+</option></select></td>
+</tr><tr>
+<td>IOT:</td>
+<td><select name="iot">
+<option>
+</option><option selected="selected">North America
+</option></select></td>
+<td>Market:</td>
+<td><select name="market">
+<option>
+</option><option selected="selected">Communications/CSI
+</option><option>Distribution
+</option><option>Financial Services
+</option><option>Industrial
+</option><option>Public
+</option><option>Canada
+</option><option>Federal
+</option></select></td>
+<td>Rept To Country:</td>
+<td><select name="country">
+<option>
+</option><option selected="selected">United Status
+</option><option>Canada
+</option></select></td>
+</tr><tr>
+<td>Brand Group:</td>
+<td><select name="brand_grp">
+<option>
+</option><option selected="selected">Analytics
+</option></select></td>
+<td>Brand:</td>
+<td><select name="brand">
+<option>
+</option><option selected="selected">Analytics Platform
+</option><option>Analytics Solutions
+</option><option>Watson
+</option></select></td>
+</tr><tr>
+<td>Prod Seg:</td>
+<td><select name="prod_seg">
+<option selected="selected">
+</option><option>Cognos Analytics
+</option><option>Core DB
+</option><option>Decision Optimization
+</option><option>Enterprise Content Management
+</option><option>Financial &amp; Operational Performance Management
+</option><option>Governance
+</option><option>Hadoop/Spark
+</option><option>Master Data Management
+</option><option>Predictive Analytics
+</option><option>SPSS
+</option><option>Watson Analytics
+</option><option>Watson Data Explorer
+</option></select></td>
+<td>Prod Fam:</td>
+<td><select name="prod_fam">
+<option selected="selected">
+</option><option>BigInsights
+</option><option>Capture
+</option><option>Case
+</option><option>Cognos Analytics
+</option><option>Content
+</option><option>DB2
+</option><option>DB2 z Tools
+</option><option>Decision Optimization/ILOG
+</option><option>ILG
+</option><option>Master Data Management
+</option><option>Optim
+</option><option>Planning Analytics
+</option><option>Software Services Analytics Platform
+</option><option>SPSS
+</option><option>TM1
+</option><option>Watson Analytics
+</option><option>Watson Explorer
+</option></select></td>
+<td>Brand Desc:</td>
+<td><input size="40" name="brand_desc" value="Software: SPSS Modeler" type="text"></td>
+</tr><tr>
+<td>Oppty Name:</td>
+<td><input size="50" name="oppty_name" value="Deloitte &amp; Touche - SPSS Modeler &amp; Text Analyt" type="text"></td>
+<td>Oppty Num:</td>
+<td><input size="10" name="oppty_num" value="TU-55IINNR" type="text"></td>
+<td>In SC:</td>
+<td><select name="yn">
+<option>
+</option><option selected="selected">Y
+</option><option>N
+</option></select></td>
+</tr><tr>
+<td>Flow Code:</td>
+<td><select name="flow_code">
+<option>
+</option><option>Resale_GSI
+</option><option selected="selected">Channel M
+</option><option>ESA_GSI
+</option><option>Influence
+</option></select></td>
+<td>Close Qtr:</td>
+<td><select name="close_qtr">
+<option selected="selected">Q1
+</option><option>Q2
+</option><option>Q3
+</option><option>Q4
+</option></select></td>
+<td>Exp Close Dt:</td>
+<td><input size="10" name="exp_close_dt" value="03/30/2017" type="date"></td>
+</tr><tr>
+<td>BPR Stat:</td>
+<td><select name="bpr_fcast_stat">
+<option>
+</option><option>Stretch
+</option><option>Key Stretch
+</option><option selected="selected">At Risk
+</option><option>Solid
+</option><option>Won
+</option><option>NIR
+</option></select></td>
+<td>Revenue:</td>
+<td><input min="0" max="100" name="rev" value="0.020" type="text"></td>
+<td>Odds:</td>
+<td><input size="3" name="odds" value="50" type="number"></td>
+</tr><tr>
+<td>SSM Step:</td>
+<td><select name="ssm_step">
+<option>
+</option><option>03-Identified/Validating
+</option><option>04-Validated/Qualifying
+</option><option selected="selected">05-Qualified/Gaining Agreement
+</option><option>06-Cond Agreed/Closing
+</option><option>07-Won/Implementing
+</option><option>08-Won and Complete
+</option></select></td>
+<td>Owning Org:</td>
+<td><select name="owning_org">
+<option>
+</option><option>Business Partners
+</option><option selected="selected">Direct
+</option></select></td>
+<td>IEMM:</td>
+<td><input size="10" name="iemm" value="Enterprise" type="text"></td>
+</tr><tr>
+<td>Report to Sector:</td>
+<td><input size="10" name="report_to_sector" value="Enterprise" type="text"></td>
+<td>Revenue Type:</td>
+<td><select name="crm_rev_type">
+<option>
+</option><option>SaaS
+</option><option selected="selected">Transactional
+</option></select></td>
+</tr><tr>
+<td>Manager:</td>
+<td><select name="mgr">
+<option>
+</option><option selected="selected">Doug Connelly
+</option></select></td>
+<td>Rep:</td>
+<td><select name="ssr">
+<option>
+</option><option>Allisa Vermillion
+</option><option>Doug Connelly
+</option><option>Harry Buckheit
+</option><option>Lorenzo Washington
+</option><option>Michael Smith
+</option><option selected="selected">Monica Verbosky
+</option><option>Tommy Conallis
+</option></select></td>
+<td>VAD:</td>
+<td><select name="vad">
+<option selected="selected">
+</option><option>Arrow Electronics Canada, Ltd.
+</option><option>Arrow Electronics, Inc.
+</option><option>Avnet Inc.
+</option><option>Avnet International (Canada)Ltd.-En
+</option><option>Ingram Micro Inc. (Canada)
+</option><option>Ingram Micro, Inc
+</option><option>Not selected yet
+</option><option>Tech Data Corporation
+</option></select></td>
+</tr><tr>
+<td>Lead Pass:</td>
+<td><select name="yn">
+<option>
+</option><option>Y
+</option><option selected="selected">N
+</option></select></td>
+<td>Slip Deal:</td>
+<td><select name="yn">
+<option>
+</option><option>Y
+</option><option selected="selected">N
+</option></select></td>
+</tr><tr>
+<td>Value Prop:</td>
+<td><input size="30" name="value_prop" type="text"></td>
+<td>Reason Act:</td>
+<td><textarea name="reason_act" rows="7" cols="35"></textarea></td>
+<td>Final Prop:</td>
+<td><textarea name="final_prop" rows="7" cols="35"></textarea></td>
+</tr><tr>
+<td>Share To Upline:</td>
+<td><select name="yn">
+<option selected="selected">
+</option><option>Y
+</option><option>N
+</option></select></td>
+</tr>
+</tbody></table>
+#1<br>
+<label><b><i>Enter New Comments Here</i></b></label><br>
+<input name="NCtype" id="F" value="F" checked="checked" type="radio">
+<label for="F">FORECAST Comment</label><br>
+<input name="NCtype" id="R" value="R" type="radio">
+<label for="R">RISK Comment</label><br>
+<textarea name="newcomment" rows="6" cols="83"></textarea>
+<input value="Submit" type="submit">
+</form>
+<p>
+<label><b><i>Comment History: (F)-Forecast Comment, (R)-Risk Comment</i></b></label></p><p>
+<table>
+<tbody><tr><td style="width: 120px">2017-02-03 15:25</td>
+<td>(R)finalizing paperwork                                             
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                       </td></tr>
+</tbody></table>
+
+</p></body></html>
