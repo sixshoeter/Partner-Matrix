@@ -1,0 +1,48 @@
+.centerText{
+   text-align: center;
+}
+
+.leftText{
+   text-align: left;
+}
+
+.leftTextSmall{
+   text-align: left;
+   height: 10px;
+   font-size: 10px;
+}
+
+.rightText{
+   text-align: right;
+}
+
+.greenText { color: green; }
+
+.yellowText { color: yellow; }
+
+.redText { color: red; }
+
+.whiteText { color: white; }
+
+dimg {
+   width: 100px;
+   height: auto;
+}
+
+dimg img {
+   max-width: 50%;
+   max-height: auto;
+   display: block;
+   overflow: hidden;
+   hspace=0;
+   vertical-align: middle;
+}
+
+a.no_show {color:#ffffff;text-decoration: none;}
+
+a.white_show {color:#ffffff;}
+
+table.u1 {
+   table-layout: fixed;
+   text-align: left;
+}

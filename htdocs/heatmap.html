@@ -1,0 +1,400 @@
+<html>
+<head>
+<title>NA-AU-Home</title>
+<link href='styles.css' rel='stylesheet' type='text/css'>
+<style> div {display: block;} </style>
+<script type='text/javascript'>
+function addImgAttributes()
+{
+var theImg = document.getElementById('theImgID');
+maxW = '300';
+maxH = '50';
+width = theImg.width;
+height = theImg.height;
+if( width == height )
+{
+   if (width > maxW )
+   {
+      nwidth = maxW;
+      nheight = maxW;
+   }
+   else
+   {
+      if (height > maxH )
+      {
+         nwidth = maxH;
+         nheight = maxH;
+      }
+      else
+      {
+         nwidth = width;
+         nheight = height;
+      }
+   }
+}
+else 
+{
+   if( width > height )
+   {
+      if (width > maxW )
+      {
+         nwidth = maxW;
+         nheight = height - height*((width - nwidth)/width);
+      }
+      else
+      {
+         if( height > maxH )
+         {
+            nheight = maxH;
+            nwidth = width - (width*((height - nheight)/height))
+         }
+         else
+         {
+            nwidth = width;
+            nheight = height;
+         }
+      }
+   }
+   else
+   {
+      if (height > maxH )
+      {
+         nheight = maxH;
+         nwidth = width - (width*((height - nheight)/height))
+      }
+      else
+      {
+         nwidth = width;
+         nheight = height;
+      }
+   }
+
+
+   theImg.setAttribute('width',nwidth);
+   theImg.setAttribute('style', 'width:',nwidth);
+   theImg.setAttribute('height',nheight);
+   theImg.setAttribute('style', 'height:',nheight);
+}
+}
+function togglerows(elementid) {
+   if( document.getElementById(elementid).style.display=='none' ){
+      document.getElementById(elementid).style.display = '';
+   }else{
+      document.getElementById(elementid).style.display = 'none';
+   }
+}
+</script>
+</head>
+<body onload='addImgAttributes();'></body>
+<div style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(255,163,25); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><span style='color: rgb(255, 255, 255);'><a href='/index.html' style='text-decoration:none'><span style='color: rgb(0,0,0);'><em>TOP Level</em></span></a></span></span></div>
+<table align='center' border='0' dir='ltr' style='width: 800px;'>
+<tbody>
+<tr>
+<th style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(255,163,25); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><span style='color: rgb(255, 255, 255);'><a href='/NA/AU/H/homeU.html' style='text-decoration:none'><span style='color: rgb(0,0,0)'>Home</span></a></span></span></th>
+<th style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(255,163,25); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><span style='color: rgb(255, 255, 255);'><a href='/NA/AU/H/menu_coverageU.html' style='text-decoration:none'><span style='color: rgb(0,0,0);'>Coverage</span></a></span></span></th>
+<th style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(255,163,25); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><span style='color: rgb(255, 255, 255);'><a href='/NA/AU/H/authorizationU.html' style='text-decoration:none'><span style='color: rgb(0,0,0);'>Authorizations</span></a></span></span></th>
+<th style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(255,163,25); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><a href='/NA/AU/H/skillsU.html' style='text-decoration:none'> 
+<span style='color: rgb(0,0,0);'>Skills</span></a></span></th>
+<th style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(255,163,25); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><a href='/NA/AU/H/industriesU.html' style='text-decoration:none'> 
+<span style='color: rgb(0,0,0);'>Industries</span></a></span></th>
+<th style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(255,163,25); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><a href='/query_AU_eus.html' style='text-decoration:none'>
+<span style='color: rgb(0,0,0);'>Find a Partner</span></a></span></th>
+		</tr>
+	</tbody>
+</table>
+ 
+<div class='centerText' dir='ltr'>
+<div dir='ltr' style='text-align: center'>
+<em><span style='font-size: 16px'></span></em></div>
+<div dir='ltr' style='text-align: center'>
+<em><span style='font-size: 20px'>IOT Industry Segment Heatmap</span></em></div>
+<p>
+<div dir='ltr' style='margin:0px auto;display:block; border: 1px solid; width: 800; font: 16px/26px Georgia, Garamond, Serif; height: 50px;'>
+<table class='u1' border='0' cellpadding='0' cellspacing='0' dir='ltr' height='50'>
+<tr><th><th><th>
+<th>Big Data and Netezza</th>
+<th>Cloud Solutions</th>
+<th>Data Management</th>
+<th>Expert Integrated Systems</th>
+<th>InfoSphere Information Integration</th>
+<th>Optim/Guardium (Data Governance)</th>
+<th>Business Intelligence</th>
+<th>Predictive Analytics</th>
+<th>Performance Management</th>
+<th>Risk Analytics</th>
+<th>Solutions</th>
+<th>Decision Optimization</th>
+<th>Capture</th>
+<th>Content Management</th>
+<th>Case Management</th>
+<th>Information Lifecycle Governance</th>
+<th>Cloud</th>
+<th>Continuous Engineering</th>
+<th>Asset Management</th>
+</tr>
+<tr><td>Financial Services</td></tr>
+<tr><td><td>Banking & Financial Market</td><td>&nbsp;&nbsp;<a href=/NA/AU/H/Banking.html target='_blank'>    87</a></td>
+<td>:     9</td>
+<td>:     0</td>
+<td>:     8</td>
+<td>:     8</td>
+<td>:     6</td>
+<td>:     8</td>
+<td>:    16</td>
+<td>:     5</td>
+<td>:    13</td>
+<td>:     0</td>
+<td>:     2</td>
+<td>:     1</td>
+<td>:    21</td>
+<td>:    29</td>
+<td>:    25</td>
+<td>:    16</td>
+<td>:     7</td>
+<td>:     4</td>
+<td>:     0</td>
+</tr>
+<tr><td><td>Insurance</td><td>&nbsp;&nbsp;<a href=/NA/AU/H/Insure.html target='_blank'>    73</a></td>
+<td>:     8</td>
+<td>:     0</td>
+<td>:     9</td>
+<td>:     9</td>
+<td>:     5</td>
+<td>:     8</td>
+<td>:    13</td>
+<td>:     5</td>
+<td>:    10</td>
+<td>:     0</td>
+<td>:     2</td>
+<td>:     1</td>
+<td>:    19</td>
+<td>:    27</td>
+<td>:    23</td>
+<td>:    14</td>
+<td>:     7</td>
+<td>:     4</td>
+<td>:     0</td>
+</tr>
+<tr><td>Public</td></tr>
+<tr><td><td>Healthcare & Lifescience</td><td>&nbsp;&nbsp;<a href=/NA/AU/H/Health.html target='_blank'>    79</a></td>
+<td>:    10</td>
+<td>:     0</td>
+<td>:     6</td>
+<td>:     6</td>
+<td>:     6</td>
+<td>:     6</td>
+<td>:    16</td>
+<td>:     4</td>
+<td>:    13</td>
+<td>:     0</td>
+<td>:     2</td>
+<td>:     1</td>
+<td>:    16</td>
+<td>:    22</td>
+<td>:    19</td>
+<td>:    11</td>
+<td>:     6</td>
+<td>:     4</td>
+<td>:     0</td>
+</tr>
+<tr><td><td>Government</td><td>&nbsp;&nbsp;<a href=/NA/AU/H/Govern.html target='_blank'>    72</a></td>
+<td>:     5</td>
+<td>:     0</td>
+<td>:     4</td>
+<td>:     4</td>
+<td>:     3</td>
+<td>:     4</td>
+<td>:    10</td>
+<td>:     3</td>
+<td>:     8</td>
+<td>:     0</td>
+<td>:     2</td>
+<td>:     0</td>
+<td>:    18</td>
+<td>:    25</td>
+<td>:    21</td>
+<td>:    14</td>
+<td>:     6</td>
+<td>:     3</td>
+<td>:     0</td>
+</tr>
+<tr><td>Communications</td></tr>
+<tr><td><td>Energy & Utility</td><td>&nbsp;&nbsp;<a href=/NA/AU/H/Energy.html target='_blank'>    58</a></td>
+<td>:     9</td>
+<td>:     0</td>
+<td>:     9</td>
+<td>:     9</td>
+<td>:     5</td>
+<td>:     7</td>
+<td>:    10</td>
+<td>:     3</td>
+<td>:     7</td>
+<td>:     0</td>
+<td>:     2</td>
+<td>:     0</td>
+<td>:    14</td>
+<td>:    21</td>
+<td>:    16</td>
+<td>:    11</td>
+<td>:     7</td>
+<td>:     2</td>
+<td>:     0</td>
+</tr>
+<tr><td><td>Telecommunication</td><td>&nbsp;&nbsp;<a href=/NA/AU/H/Tele.html target='_blank'>    59</a></td>
+<td>:    10</td>
+<td>:     0</td>
+<td>:     6</td>
+<td>:     6</td>
+<td>:     4</td>
+<td>:     6</td>
+<td>:    11</td>
+<td>:     5</td>
+<td>:    10</td>
+<td>:     0</td>
+<td>:     3</td>
+<td>:     1</td>
+<td>:     9</td>
+<td>:    15</td>
+<td>:    13</td>
+<td>:     7</td>
+<td>:     5</td>
+<td>:     3</td>
+<td>:     0</td>
+</tr>
+<tr><td><td>Media & Entertainment</td><td>&nbsp;&nbsp;<a href=/NA/AU/H/Media.html target='_blank'>    54</a></td>
+<td>:     8</td>
+<td>:     0</td>
+<td>:     4</td>
+<td>:     4</td>
+<td>:     2</td>
+<td>:     4</td>
+<td>:    11</td>
+<td>:     4</td>
+<td>:     8</td>
+<td>:     0</td>
+<td>:     2</td>
+<td>:     0</td>
+<td>:     9</td>
+<td>:    13</td>
+<td>:    12</td>
+<td>:     5</td>
+<td>:     5</td>
+<td>:     3</td>
+<td>:     0</td>
+</tr>
+<tr><td>Distribution</td></tr>
+<tr><td><td>Retail</td><td>&nbsp;&nbsp;<a href=/NA/AU/H/Retail.html target='_blank'>    81</a></td>
+<td>:    12</td>
+<td>:     0</td>
+<td>:    10</td>
+<td>:    10</td>
+<td>:     7</td>
+<td>:     8</td>
+<td>:    18</td>
+<td>:     5</td>
+<td>:    13</td>
+<td>:     0</td>
+<td>:     3</td>
+<td>:     1</td>
+<td>:    15</td>
+<td>:    21</td>
+<td>:    16</td>
+<td>:    10</td>
+<td>:     6</td>
+<td>:     4</td>
+<td>:     0</td>
+</tr>
+<tr><td><td>Transportation</td><td>&nbsp;&nbsp;<a href=/NA/AU/H/Trans.html target='_blank'>    50</a></td>
+<td>:     7</td>
+<td>:     0</td>
+<td>:     3</td>
+<td>:     3</td>
+<td>:     3</td>
+<td>:     3</td>
+<td>:    12</td>
+<td>:     4</td>
+<td>:    10</td>
+<td>:     0</td>
+<td>:     2</td>
+<td>:     1</td>
+<td>:     9</td>
+<td>:    13</td>
+<td>:    11</td>
+<td>:     6</td>
+<td>:     5</td>
+<td>:     3</td>
+<td>:     0</td>
+</tr>
+<tr><td>Other</td></tr>
+<tr><td><td>Wholesale Distribution</td><td>&nbsp;&nbsp;<a href=/NA/AU/H/Whlsle.html target='_blank'>    53</a></td>
+<td>:     9</td>
+<td>:     0</td>
+<td>:     6</td>
+<td>:     6</td>
+<td>:     5</td>
+<td>:     6</td>
+<td>:     7</td>
+<td>:     3</td>
+<td>:     6</td>
+<td>:     0</td>
+<td>:     1</td>
+<td>:     1</td>
+<td>:    10</td>
+<td>:    16</td>
+<td>:    12</td>
+<td>:     7</td>
+<td>:     6</td>
+<td>:     3</td>
+<td>:     0</td>
+</tr>
+<tr><td><td>Manufacturing</td><td>&nbsp;&nbsp;<a href=/NA/AU/H/Mfg.html target='_blank'>    63</a></td>
+<td>:     9</td>
+<td>:     0</td>
+<td>:     5</td>
+<td>:     5</td>
+<td>:     5</td>
+<td>:     4</td>
+<td>:    12</td>
+<td>:     4</td>
+<td>:    11</td>
+<td>:     0</td>
+<td>:     2</td>
+<td>:     1</td>
+<td>:    15</td>
+<td>:    21</td>
+<td>:    17</td>
+<td>:    12</td>
+<td>:     6</td>
+<td>:     2</td>
+<td>:     0</td>
+</tr>
+<tr><td><td>Cross-Industry</td><td>&nbsp;&nbsp;<a href=/NA/AU/H/Cross.html target='_blank'>    52</a></td>
+<td>:     6</td>
+<td>:     0</td>
+<td>:     3</td>
+<td>:     3</td>
+<td>:     3</td>
+<td>:     3</td>
+<td>:    12</td>
+<td>:     3</td>
+<td>:    11</td>
+<td>:     0</td>
+<td>:     3</td>
+<td>:     0</td>
+<td>:    10</td>
+<td>:    14</td>
+<td>:    12</td>
+<td>:     7</td>
+<td>:     6</td>
+<td>:     1</td>
+<td>:     0</td>
+</tr>
+</table>
+<span style='font-size:9px; text-align:left;'>3.01a <a href='/cgi-bin/snap.ksh' class='no_show' target ='_blank'> - </a>2015-05-20 10:32:37 <a href='/cgi-bin/regen_AU.ksh' class='no_show' target = '_blank'> - </a><em>Please send feedback on the Partner Matrix Tool to <a href='http://faces.tap.ibm.com/#uid:5A8702897/john%20shoemaker/John%20Shoemaker' target='_blank'>John Shoemaker</a></em> &nbsp;</span>

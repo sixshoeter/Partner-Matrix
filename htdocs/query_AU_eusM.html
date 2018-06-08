@@ -1,0 +1,603 @@
+<html>
+<head>
+<title>NA-AU-Find a Partner</title>
+<link href='styles.css' rel='stylesheet' type='text/css'>
+<style> div {display: block;} </style>
+<script type='text/javascript'>
+function addImgAttributes()
+{
+var theImg = document.getElementById('theImgID');
+maxW = '300';
+maxH = '50';
+width = theImg.width;
+height = theImg.height;
+if( width == height )
+{
+   if (width > maxW )
+   {
+      nwidth = maxW;
+      nheight = maxW;
+   }
+   else
+   {
+      if (height > maxH )
+      {
+         nwidth = maxH;
+         nheight = maxH;
+      }
+      else
+      {
+         nwidth = width;
+         nheight = height;
+      }
+   }
+}
+else 
+{
+   if( width > height )
+   {
+      if (width > maxW )
+      {
+         nwidth = maxW;
+         nheight = height - height*((width - nwidth)/width);
+      }
+      else
+      {
+         if( height > maxH )
+         {
+            nheight = maxH;
+            nwidth = width - (width*((height - nheight)/height))
+         }
+         else
+         {
+            nwidth = width;
+            nheight = height;
+         }
+      }
+   }
+   else
+   {
+      if (height > maxH )
+      {
+         nheight = maxH;
+         nwidth = width - (width*((height - nheight)/height))
+      }
+      else
+      {
+         nwidth = width;
+         nheight = height;
+      }
+   }
+
+
+   theImg.setAttribute('width',nwidth);
+   theImg.setAttribute('style', 'width:',nwidth);
+   theImg.setAttribute('height',nheight);
+   theImg.setAttribute('style', 'height:',nheight);
+}
+}
+function togglerows(elementid) {
+   if( document.getElementById(elementid).style.display=='none' ){
+      document.getElementById(elementid).style.display = '';
+   }else{
+      document.getElementById(elementid).style.display = 'none';
+   }
+}
+</script>
+</head>
+<body onload='addImgAttributes()'>
+<div style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(255,163,25); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><span style='color: rgb(255, 255, 255);'><a href='/index.html' style='text-decoration:none'><span style='color: rgb(0,0,0);'><em>TOP Level</em></span></a></span></span></div>
+<table align='center' border='0' dir='ltr' style='width: 800px;'>
+<tbody>
+<tr>
+<th style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(250,205,136); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><span style='color: rgb(255, 255, 255);'><a href='/NA/AU/H/homeU.html' style='text-decoration:none'><span style='color: rgb(0,0,0)'>Home</span></a></span></span></th>
+<th style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(255,163,25); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><a href='/query_AU_eus.html' style='text-decoration:none'>
+<span style='color: rgb(0,0,0);'>Find a Partner</span></a></span></th>
+<th style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(250,205,136); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><span style='color: rgb(255, 255, 255);'><a href='/NA/AU/H/menu_coverageU.html' style='text-decoration:none'><span style='color: rgb(0,0,0);'>Coverage</span></a></span></span></th>
+<th style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(250,205,136); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><span style='color: rgb(255, 255, 255);'><a href='/NA/AU/H/authorizationU.html' style='text-decoration:none'><span style='color: rgb(0,0,0);'>Partner List</span></a></span></span></th>
+<th style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(250,205,136); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><a href='/NA/AU/H/skillsU.html' style='text-decoration:none'> 
+<span style='color: rgb(0,0,0);'>Skills</span></a></span></th>
+<th style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(250,205,136); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><a href='/NA/AU/H/industriesU.html' style='text-decoration:none'> 
+<span style='color: rgb(0,0,0);'>Industries</span></a></span></th>
+		</tr>
+	</tbody>
+</table>
+ 
+<div dir='ltr' style='text-align: center'>
+<em><span style='font-size: 16px'>Please select the desired filter options below. Each of your choices will further filter the results.</span></em></div>
+<div dir='ltr' style='text-align: center'>
+<em><span style='font-size: 16px'>For Example: Checking both <i>Southwest</i> and <i>BPM</i> will find all Partners</span></em></div>
+<div dir='ltr' style='text-align: center'>
+<em><span style='font-size: 16px'>selling in the <i>Southwest</i> Enterprise Unit that are top skilled in <i>BPM</i>.</span></em></div><p>
+<div dir='ltr' style='text-align: center'>
+<b>Important Note: Only Recommended Partners will be returned from this query!</b></div>
+<div dir='ltr' style='text-align: center'>
+<em><span style='font-size: 20px'>North America * Analytics Unit</span></em></div>
+<p dir='ltr'> &nbsp;</p>
+<h2>Query Inputs</h2> <em>(Each checkbox below for Geography and Skills are ADDED as additional filters-e.g., NOT either-or)
+<form action=cgi-bin/AUquery_eusM.ksh>
+<fieldset>
+<p>
+<label><b><i>Geography / Enterprise Units:</i></b></label>
+<br />
+<label><b><i>US West</i></b></label>
+<br />
+<input type='checkbox'
+   name = 'eu'
+   value = 'eu_pacificnw' />
+  <label for = 'chkEU1'>Pacific Northwest</label>
+<input type='checkbox'
+   name = 'eu'
+   value = 'eu_northca' />
+  <label for = 'chkEU2'>Northern California</label>
+<input type='checkbox'
+   name = 'eu'
+   value = 'eu_southwest' />
+  <label for = 'chkEU3'>Southwest & Rockies</label>
+<br />
+<label><b><i>US Midwest</i></b></label>
+<br />
+<input type='checkbox'
+   name = 'eu'
+   value = 'eu_northern' />
+  <label for = 'chkEU4'>Northern Stars</label>
+<input type='checkbox'
+   name = 'eu'
+   value = 'eu_plains' />
+  <label for = 'chkEU5'>Plains</label>
+<input type='checkbox'
+   name = 'eu'
+   value = 'eu_heartland' />
+  <label for = 'chkEU6'>Heartland</label>
+<input type='checkbox'
+   name = 'eu'
+   value = 'eu_texas' />
+  <label for = 'chkEU7'>Texas/New Mexico/Gulf</label>
+<br />
+<label><b><i>US North</i></b></label>
+<br />
+<input type='checkbox'
+   name = 'eu'
+   value = 'eu_garden' />
+  <label for = 'chkEU8'>Garden State</label>
+<input type='checkbox'
+   name = 'eu'
+   value = 'eu_northeast' />
+  <label for = 'chkEU9'>Northeast</label>
+<input type='checkbox'
+   name = 'eu'
+   value = 'eu_ny' />
+  <label for = 'chkEU10'>NY Metro</label>
+<br />
+<label><b><i>US Mid-Atlantic</i></b></label>
+<br />
+<input type='checkbox'
+   name = 'eu'
+   value = 'eu_delaware' />
+  <label for = 'chkEU11'>Delaware Valley</label>
+<input type='checkbox'
+   name = 'eu'
+   value = 'eu_potomac' />
+  <label for = 'chkEU12'>Potomac Valley</label>
+<input type='checkbox'
+   name = 'eu'
+   value = 'eu_carolinas' />
+  <label for = 'chkEU13'>Carolinas</label>
+<br />
+<label><b><i>US Great Lakes/South</i></b></label>
+<br />
+<input type='checkbox'
+   name = 'eu'
+   value = 'eu_midamerica' />
+  <label for = 'chkEU14'>Mid-America</label>
+<input type='checkbox'
+   name = 'eu'
+   value = 'eu_ohio' />
+  <label for = 'chkEU15'>Ohio Valley</label>
+<input type='checkbox'
+   name = 'eu'
+   value = 'eu_southeast' />
+  <label for = 'chkEU16'>Southeast</label>
+<input type='checkbox'
+   name = 'eu'
+   value = 'eu_sunshine' />
+  <label for = 'chkEU17'>Sunshine Belt</label>
+<br />
+<label><b><i>Federal</i></b></label>
+<br />
+<input type='checkbox'
+   name = 'eu'
+   value = 'eu_fed' />
+  <label for = 'chkEU18'>Federal</label>
+<br />
+<label><b><i>Canada</i></b></label>
+<br />
+<input type='checkbox'
+   name = 'eu'
+   value = 'eu_ca' />
+  <label for = 'chkEU19'>Canada</label>
+</p>
+</fieldset>
+<fieldset>
+<p>
+<label><b><i>Skills:</i></b></label><br />
+       <label>Choose Desired Skill Level:</label>            
+          <input type = "radio"
+                 name = "SLevel"
+                 id = "3"
+                 value = "3"
+                 checked = "checked" />
+          <label for = "3">Recommended</label>
+          
+          <input type = "radio"
+                 name = "SLevel"
+                 id = "2"
+                 value = "2" />
+          <label for = "2">Skilled</label>
+ 
+          <input type = "radio"
+                 name = "SLevel"
+                 id = "1"
+                 value = "1" />
+          <label for = "1">Learning</label>
+ 
+<br />
+<p><em>Big Data and Netezza</em><br />
+<input type='checkbox'
+   name = 'IM-skill_01'
+   value = 'skill_01' />
+  <label for = 'chkSK'>Big Insights/Hadoop</label>
+<input type='checkbox'
+   name = 'IM-skill_18'
+   value = 'skill_18' />
+  <label for = 'chkSK'>PureData for Analytics (Netezza)</label>
+<input type='checkbox'
+   name = 'IM-skill_06'
+   value = 'skill_06' />
+  <label for = 'chkSK'>PureData for Operational Analytics</label>
+<input type='checkbox'
+   name = 'IM-skill_04'
+   value = 'skill_04' />
+  <label for = 'chkSK'>Streams</label>
+<br />
+<input type='checkbox'
+   name = 'IM-skill_03'
+   value = 'skill_03' />
+  <label for = 'chkSK'>Watson Explorer</label>
+<p><em>Cloud Solutions</em><br />
+<input type='checkbox'
+   name = 'IM-skill_09'
+   value = 'skill_09' />
+  <label for = 'chkSK'>Bluemix/Softlayer</label>
+<input type='checkbox'
+   name = 'IM-skill_10'
+   value = 'skill_10' />
+  <label for = 'chkSK'>Cloud Databases (incl. Cloudant and dashDB)</label>
+<p><em>Data Management</em><br />
+<input type='checkbox'
+   name = 'IM-skill_07'
+   value = 'skill_07' />
+  <label for = 'chkSK'>Database Tools and DB2 Connect</label>
+<input type='checkbox'
+   name = 'IM-skill_08'
+   value = 'skill_08' />
+  <label for = 'chkSK'>DB2</label>
+<input type='checkbox'
+   name = 'IM-skill_12'
+   value = 'skill_12' />
+  <label for = 'chkSK'>DB2 on z/OS</label>
+<input type='checkbox'
+   name = 'IM-skill_05'
+   value = 'skill_05' />
+  <label for = 'chkSK'>Industry Models</label>
+<br />
+<input type='checkbox'
+   name = 'IM-skill_14'
+   value = 'skill_14' />
+  <label for = 'chkSK'>Informix</label>
+<p><em>Expert Integrated Systems</em><br />
+<input type='checkbox'
+   name = 'IM-skill_15'
+   value = 'skill_15' />
+  <label for = 'chkSK'>PureData for Transactions</label>
+<p><em>InfoSphere Information Integration</em><br />
+<input type='checkbox'
+   name = 'IM-skill_02'
+   value = 'skill_02' />
+  <label for = 'chkSK'>InfoSphere Data Replication (incl. CDC, Data  Replication and Federation Server)</label>
+<input type='checkbox'
+   name = 'IM-skill_13'
+   value = 'skill_13' />
+  <label for = 'chkSK'>Information Server (incl. DataStage, and QualityStage)</label>
+<input type='checkbox'
+   name = 'IM-skill_16'
+   value = 'skill_16' />
+  <label for = 'chkSK'>Master Data Mgmt & EA (incl. Entity Analytics, MDM and RDM)</label>
+<p><em>Optim/Guardium (Data Governance)</em><br />
+<input type='checkbox'
+   name = 'IM-skill_11'
+   value = 'skill_11' />
+  <label for = 'chkSK'>Guardium (incl. Database Activity Monitoring, Redaction and Vulnerability Assessment)</label>
+<input type='checkbox'
+   name = 'IM-skill_19'
+   value = 'skill_19' />
+  <label for = 'chkSK'>Guardium Encryption</label>
+<input type='checkbox'
+   name = 'IM-skill_17'
+   value = 'skill_17' />
+  <label for = 'chkSK'>Optim (incl Capture and Replay, Data Growth, Data Masking and Test Data Mgmt)</label>
+<HR>
+<p><em>Business Intelligence</em><br />
+<input type='checkbox'
+   name = 'BA-skill_01'
+   value = 'skill_01' />
+  <label for = 'chkSK'>Cognos Enterprise</label>
+<input type='checkbox'
+   name = 'BA-skill_02'
+   value = 'skill_02' />
+  <label for = 'chkSK'>Cognos Express</label>
+<input type='checkbox'
+   name = 'BA-skill_03'
+   value = 'skill_03' />
+  <label for = 'chkSK'>Cognos Insight</label>
+<input type='checkbox'
+   name = 'BA-skill_04'
+   value = 'skill_04' />
+  <label for = 'chkSK'>Watson Analytics</label>
+<br />
+<p><em>Predictive Analytics</em><br />
+<input type='checkbox'
+   name = 'BA-skill_05'
+   value = 'skill_05' />
+  <label for = 'chkSK'>SPSS Data Collection</label>
+<input type='checkbox'
+   name = 'BA-skill_06'
+   value = 'skill_06' />
+  <label for = 'chkSK'>SPSS Statistics</label>
+<input type='checkbox'
+   name = 'BA-skill_07'
+   value = 'skill_07' />
+  <label for = 'chkSK'>SPSS Modeler</label>
+<input type='checkbox'
+   name = 'BA-skill_08'
+   value = 'skill_08' />
+  <label for = 'chkSK'>SPSS Modeler Gold</label>
+<br />
+<p><em>Performance Management</em><br />
+<input type='checkbox'
+   name = 'BA-skill_09'
+   value = 'skill_09' />
+  <label for = 'chkSK'>TM1</label>
+<input type='checkbox'
+   name = 'BA-skill_10'
+   value = 'skill_10' />
+  <label for = 'chkSK'>Cognos Disclosure Management</label>
+<input type='checkbox'
+   name = 'BA-skill_11'
+   value = 'skill_11' />
+  <label for = 'chkSK'>Controller</label>
+<input type='checkbox'
+   name = 'BA-skill_12'
+   value = 'skill_12' />
+  <label for = 'chkSK'>Incentive Compensation Management</label>
+<br />
+<input type='checkbox'
+   name = 'BA-skill_13'
+   value = 'skill_13' />
+  <label for = 'chkSK'>Territory Management</label>
+<input type='checkbox'
+   name = 'BA-skill_14'
+   value = 'skill_14' />
+  <label for = 'chkSK'>Concert</label>
+<p><em>Risk Analytics</em><br />
+<input type='checkbox'
+   name = 'BA-skill_15'
+   value = 'skill_15' />
+  <label for = 'chkSK'>OpenPages</label>
+<input type='checkbox'
+   name = 'BA-skill_16'
+   value = 'skill_16' />
+  <label for = 'chkSK'>Algorithmics</label>
+<p><em>Solutions</em><br />
+<input type='checkbox'
+   name = 'BA-skill_17'
+   value = 'skill_17' />
+  <label for = 'chkSK'>Financial/Operational Perf Mgmt</label>
+<input type='checkbox'
+   name = 'BA-skill_18'
+   value = 'skill_18' />
+  <label for = 'chkSK'>Narrative Reporting and Disclosure Mgmt</label>
+<input type='checkbox'
+   name = 'BA-skill_19'
+   value = 'skill_19' />
+  <label for = 'chkSK'>Sales Performance Mgmt</label>
+<input type='checkbox'
+   name = 'BA-skill_20'
+   value = 'skill_20' />
+  <label for = 'chkSK'>Predictive Customer Intelligence</label>
+<br />
+<input type='checkbox'
+   name = 'BA-skill_21'
+   value = 'skill_21' />
+  <label for = 'chkSK'>Predictive Maintenance and Quality</label>
+<input type='checkbox'
+   name = 'BA-skill_22'
+   value = 'skill_22' />
+  <label for = 'chkSK'>Capacity Management Analytics</label>
+<input type='checkbox'
+   name = 'BA-skill_23'
+   value = 'skill_23' />
+  <label for = 'chkSK'>Forward Looking Business Intelligence</label>
+<input type='checkbox'
+   name = 'BA-skill_24'
+   value = 'skill_24' />
+  <label for = 'chkSK'>Predictive Analytics Enterprise Solutions</label>
+<br />
+<input type='checkbox'
+   name = 'BA-skill_25'
+   value = 'skill_25' />
+  <label for = 'chkSK'>Financial Risk Mgmt Banking/Financial Markets</label>
+<input type='checkbox'
+   name = 'BA-skill_26'
+   value = 'skill_26' />
+  <label for = 'chkSK'>Financial Risk Management Insurers</label>
+<input type='checkbox'
+   name = 'BA-skill_27'
+   value = 'skill_27' />
+  <label for = 'chkSK'>Risk Information Governance</label>
+<input type='checkbox'
+   name = 'BA-skill_28'
+   value = 'skill_28' />
+  <label for = 'chkSK'>Governance, Risk and Compliance</label>
+<br />
+<p><em>Decision Optimization</em><br />
+<input type='checkbox'
+   name = 'BA-skill_29'
+   value = 'skill_29' />
+  <label for = 'chkSK'>Decision Optimization Center</label>
+<input type='checkbox'
+   name = 'BA-skill_30'
+   value = 'skill_30' />
+  <label for = 'chkSK'>CPLEX</label>
+<HR>
+<p><em>Capture</em><br />
+<input type='checkbox'
+   name = 'EM-skill_01'
+   value = 'skill_01' />
+  <label for = 'chkSK'>Datacap</label>
+<input type='checkbox'
+   name = 'EM-skill_02'
+   value = 'skill_02' />
+  <label for = 'chkSK'>Production Imaging Edition</label>
+<p><em>Content Management</em><br />
+<input type='checkbox'
+   name = 'EM-skill_03'
+   value = 'skill_03' />
+  <label for = 'chkSK'>IBM Content Navigator</label>
+<input type='checkbox'
+   name = 'EM-skill_04'
+   value = 'skill_04' />
+  <label for = 'chkSK'>FileNet Content Manager</label>
+<input type='checkbox'
+   name = 'EM-skill_05'
+   value = 'skill_05' />
+  <label for = 'chkSK'>IBM Content Manager</label>
+<input type='checkbox'
+   name = 'EM-skill_06'
+   value = 'skill_06' />
+  <label for = 'chkSK'>Content Manager OnDemand</label>
+<br />
+<input type='checkbox'
+   name = 'EM-skill_07'
+   value = 'skill_07' />
+  <label for = 'chkSK'>FileNet Image Services/Manager</label>
+<input type='checkbox'
+   name = 'EM-skill_08'
+   value = 'skill_08' />
+  <label for = 'chkSK'>Social Content Management</label>
+<input type='checkbox'
+   name = 'EM-skill_20'
+   value = 'skill_20' />
+  <label for = 'chkSK'>Content Classification</label>
+<p><em>Case Management</em><br />
+<input type='checkbox'
+   name = 'EM-skill_10'
+   value = 'skill_10' />
+  <label for = 'chkSK'>IBM Case Foundation</label>
+<input type='checkbox'
+   name = 'EM-skill_09'
+   value = 'skill_09' />
+  <label for = 'chkSK'>IBM Case Manager</label>
+<input type='checkbox'
+   name = 'EM-skill_11'
+   value = 'skill_11' />
+  <label for = 'chkSK'>Case Manager for Investigation</label>
+<p><em>Information Lifecycle Governance</em><br />
+<input type='checkbox'
+   name = 'EM-skill_12'
+   value = 'skill_12' />
+  <label for = 'chkSK'>Atlas</label>
+<input type='checkbox'
+   name = 'EM-skill_13'
+   value = 'skill_13' />
+  <label for = 'chkSK'>StoredIQ</label>
+<input type='checkbox'
+   name = 'EM-skill_14'
+   value = 'skill_14' />
+  <label for = 'chkSK'>IBM Content Collector</label>
+<input type='checkbox'
+   name = 'EM-skill_15'
+   value = 'skill_15' />
+  <label for = 'chkSK'>IBM Content Collector for SAP</label>
+<br />
+<input type='checkbox'
+   name = 'EM-skill_16'
+   value = 'skill_16' />
+  <label for = 'chkSK'>eDiscovery</label>
+<input type='checkbox'
+   name = 'EM-skill_17'
+   value = 'skill_17' />
+  <label for = 'chkSK'>IBM Enterprise Records</label>
+<p><em>Cloud</em><br />
+<input type='checkbox'
+   name = 'EM-skill_18'
+   value = 'skill_18' />
+  <label for = 'chkSK'>IBM Navigator</label>
+<input type='checkbox'
+   name = 'EM-skill_19'
+   value = 'skill_19' />
+  <label for = 'chkSK'>Partner Cloud Solutions</label>
+<input type='checkbox'
+   name = 'EM-skill_21'
+   value = 'skill_21' />
+  <label for = 'chkSK'>Watson Curator</label>
+<HR>
+<p><em>Continuous Engineering</em><br />
+<input type='checkbox'
+   name = 'IO-skill_01'
+   value = 'skill_01' />
+  <label for = 'chkSK'>Rational Team Concert</label>
+<input type='checkbox'
+   name = 'IO-skill_02'
+   value = 'skill_02' />
+  <label for = 'chkSK'>DOORS Next Gen</label>
+<input type='checkbox'
+   name = 'IO-skill_03'
+   value = 'skill_03' />
+  <label for = 'chkSK'>Rational Quality Management</label>
+<input type='checkbox'
+   name = 'IO-skill_04'
+   value = 'skill_04' />
+  <label for = 'chkSK'>DOORS</label>
+<br />
+<input type='checkbox'
+   name = 'IO-skill_05'
+   value = 'skill_05' />
+  <label for = 'chkSK'>Rational Engineering Lifecycle Mgr</label>
+<input type='checkbox'
+   name = 'IO-skill_06'
+   value = 'skill_06' />
+  <label for = 'chkSK'>Rhapsody/Design Manager</label>
+<p><em>Asset Management</em><br />
+<input type='checkbox'
+   name = 'IO-skill_07'
+   value = 'skill_07' />
+  <label for = 'chkSK'>Maximo</label>
+<input type='checkbox'
+   name = 'IO-skill_08'
+   value = 'skill_08' />
+  <label for = 'chkSK'>Tririga</label>
+<HR>
+</p>
+</fieldset>
+<input type='submit' value='Submit'>
+<input type='reset' value='Clear'>
+</form>
+<span style='font-size:9px; text-align:left;'>3.30a <a href='/cgi-bin/snap.ksh' class='no_show' target ='_blank'> - </a>2015-09-08 15:40:46 <a href='/cgi-bin/regen_AU.ksh' class='no_show' target = '_blank'> - </a><em>Please send feedback on the Partner Matrix Tool to <a href='http://faces.tap.ibm.com/#uid:5A8702897/john%20shoemaker/John%20Shoemaker' target='_blank'>John Shoemaker</a></em> &nbsp;</span>

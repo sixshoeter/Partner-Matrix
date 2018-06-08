@@ -1,0 +1,186 @@
+<html>
+<head>
+<title>NA-AU-Find a Partner</title>
+<link href='styles.css' rel='stylesheet' type='text/css'>
+<style> div {display: block;} </style>
+<script type='text/javascript'>
+function addImgAttributes()
+{
+var theImg = document.getElementById('theImgID');
+maxW = '300';
+maxH = '50';
+width = theImg.width;
+height = theImg.height;
+if( width == height )
+{
+   if (width > maxW )
+   {
+      nwidth = maxW;
+      nheight = maxW;
+   }
+   else
+   {
+      if (height > maxH )
+      {
+         nwidth = maxH;
+         nheight = maxH;
+      }
+      else
+      {
+         nwidth = width;
+         nheight = height;
+      }
+   }
+}
+else 
+{
+   if( width > height )
+   {
+      if (width > maxW )
+      {
+         nwidth = maxW;
+         nheight = height - height*((width - nwidth)/width);
+      }
+      else
+      {
+         if( height > maxH )
+         {
+            nheight = maxH;
+            nwidth = width - (width*((height - nheight)/height))
+         }
+         else
+         {
+            nwidth = width;
+            nheight = height;
+         }
+      }
+   }
+   else
+   {
+      if (height > maxH )
+      {
+         nheight = maxH;
+         nwidth = width - (width*((height - nheight)/height))
+      }
+      else
+      {
+         nwidth = width;
+         nheight = height;
+      }
+   }
+
+
+   theImg.setAttribute('width',nwidth);
+   theImg.setAttribute('style', 'width:',nwidth);
+   theImg.setAttribute('height',nheight);
+   theImg.setAttribute('style', 'height:',nheight);
+}
+}
+function togglerows(elementid) {
+   if( document.getElementById(elementid).style.display=='none' ){
+      document.getElementById(elementid).style.display = '';
+   }else{
+      document.getElementById(elementid).style.display = 'none';
+   }
+}
+</script>
+</head>
+<body onload='addImgAttributes()'></body>
+<div style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(255,163,25); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><span style='color: rgb(255, 255, 255);'><a href='/index.html' style='text-decoration:none'><span style='color: rgb(0,0,0);'><em>TOP Level</em></span></a></span></span></div>
+<table align='center' border='0' dir='ltr' style='width: 800px;'>
+<tbody>
+<tr>
+<th style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(250,205,136); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><span style='color: rgb(255, 255, 255);'><a href='/NA/AU/H/homeU.html' style='text-decoration:none'><span style='color: rgb(0,0,0)'>Home</span></a></span></span></th>
+<th style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(255,163,25); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><a href='/query_AU_eus.html' style='text-decoration:none'>
+<span style='color: rgb(0,0,0);'>Find a Partner</span></a></span></th>
+<th style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(250,205,136); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><span style='color: rgb(255, 255, 255);'><a href='/NA/AU/H/menu_coverage.html' style='text-decoration:none'><span style='color: rgb(0,0,0);'>Coverage</span></a></span></span></th>
+<th style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(250,205,136); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><span style='color: rgb(255, 255, 255);'><a href='/NA/AU/H/authorizationU.html' style='text-decoration:none'><span style='color: rgb(0,0,0);'>Partner List</span></a></span></span></th>
+<th style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(250,205,136); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><a href='/NA/AU/H/skillsU.html' style='text-decoration:none'> 
+<span style='color: rgb(0,0,0);'>Skills</span></a></span></th>
+<th style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(250,205,136); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><a href='/NA/AU/H/industries.html' style='text-decoration:none'> 
+<span style='color: rgb(0,0,0);'>Industries</span></a></span></th>
+<th style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(250,205,136); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><a href='/AU_eus_drive.html' style='text-decoration:none'>
+<span style='color: rgb(0,0,0);'>Enterprise Units</span></a></span></th>
+		</tr>
+	</tbody>
+</table>
+ 
+<div dir='ltr' style='text-align: center'>
+<em><span style='font-size: 16px'>Please select the desired filter options below. Each of your choices will further filter the results.</span></em></div>
+<div dir='ltr' style='text-align: center'>
+<em><span style='font-size: 16px'>For Example: Checking both <i>Pacifics</i> and <i>Southeast</i> and checking <i>BPM</i> will find all Partners</span></em></div>
+<div dir='ltr' style='text-align: center'>
+<em><span style='font-size: 16px'>selling in BOTH the <i>Pacifics</i> and <i>Southeast</i> Business Units that are top skilled in <i>BPM</i>.</span></em></div><p>
+<div dir='ltr' style='text-align: center'>
+<b>Important Note: Only TOP Skilled Partners will be returned from this query!</b></div>
+<div dir='ltr' style='text-align: center'>
+<em><span style='font-size: 20px'>North America * Analytics Unit</span></em></div>
+<p dir='ltr'> &nbsp;</p>
+<h2>Query Inputs</h2>
+<form action=cgi-bin/AUquery.ksh>
+<fieldset>
+<p>
+<label><b><i>Business Unit:</i></b></label>
+<br />
+<input type='radio'
+   name = 'bu'
+   value = '' />
+  <label for = 'chkBU'></label>
+<input type='radio'
+   name = 'bu'
+   value = '' />
+  <label for = 'chkBU'></label>
+<input type='radio'
+   name = 'bu'
+   value = '' />
+  <label for = 'chkBU'></label>
+<input type='radio'
+   name = 'bu'
+   value = '' />
+  <label for = 'chkBU'></label>
+<input type='radio'
+   name = 'bu'
+   value = '' />
+  <label for = 'chkBU'></label>
+<br />
+<input type='radio'
+   name = 'bu'
+   value = '' />
+  <label for = 'chkBU'></label>
+<input type='radio'
+   name = 'bu'
+   value = '' />
+  <label for = 'chkBU'></label>
+<input type='radio'
+   name = 'bu'
+   value = '' />
+  <label for = 'chkBU'></label>
+<input type='radio'
+   name = 'bu'
+   value = '' />
+  <label for = 'chkBU'></label>
+<input type='radio'
+   name = 'bu'
+   value = '' />
+  <label for = 'chkBU'></label>
+<br />
+</p>
+</fieldset>
+<fieldset>
+<p>
+<label><b><i>Skills:</i></b></label>
+<br />
+</p>
+</fieldset>
+<input type='submit' value='Submit'>
+<input type='reset' value='Clear'>
+</form>
+<span style='font-size:9px; text-align:left;'>3.30a <a href='/cgi-bin/snap.ksh' class='no_show' target ='_blank'> - </a>2016-02-29 08:48:18 <a href='/cgi-bin/regen_AU.ksh' class='no_show' target = '_blank'> - </a><em>Please send feedback on the Partner Matrix Tool to <a href='http://faces.tap.ibm.com/bluepages/profile.html?email=jshoe@us.ibm.com' target='_blank'>John Shoemaker</a></em> &nbsp;</span>

@@ -1,0 +1,333 @@
+<html>
+<head>
+<title>NA-RA-Find a Partner</title>
+<link href='styles.css' rel='stylesheet' type='text/css'>
+<style> div {display: block;} </style>
+<script type='text/javascript'>
+function addImgAttributes()
+{
+var theImg = document.getElementById('theImgID');
+maxW = '300';
+maxH = '50';
+width = theImg.width;
+height = theImg.height;
+if( width == height )
+{
+   if (width > maxW )
+   {
+      nwidth = maxW;
+      nheight = maxW;
+   }
+   else
+   {
+      if (height > maxH )
+      {
+         nwidth = maxH;
+         nheight = maxH;
+      }
+      else
+      {
+         nwidth = width;
+         nheight = height;
+      }
+   }
+}
+else 
+{
+   if( width > height )
+   {
+      if (width > maxW )
+      {
+         nwidth = maxW;
+         nheight = height - height*((width - nwidth)/width);
+      }
+      else
+      {
+         if( height > maxH )
+         {
+            nheight = maxH;
+            nwidth = width - (width*((height - nheight)/height))
+         }
+         else
+         {
+            nwidth = width;
+            nheight = height;
+         }
+      }
+   }
+   else
+   {
+      if (height > maxH )
+      {
+         nheight = maxH;
+         nwidth = width - (width*((height - nheight)/height))
+      }
+      else
+      {
+         nwidth = width;
+         nheight = height;
+      }
+   }
+
+
+   theImg.setAttribute('width',nwidth);
+   theImg.setAttribute('style', 'width:',nwidth);
+   theImg.setAttribute('height',nheight);
+   theImg.setAttribute('style', 'height:',nheight);
+}
+}
+function togglerows(elementid) {
+   if( document.getElementById(elementid).style.display=='none' ){
+      document.getElementById(elementid).style.display = '';
+   }else{
+      document.getElementById(elementid).style.display = 'none';
+   }
+}
+</script>
+</head>
+<body onload='addImgAttributes();'></body>
+<div style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(45,161,239); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><span style='color: rgb(255, 255, 255);'><a href='/index.html' style='text-decoration:none'><span style='color: rgb(0,0,0);'><em>TOP Level</em></span></a></span></span></div>
+<table align='center' border='0' dir='ltr' style='width: 800px;'>
+<tbody>
+<tr>
+<th style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(130,202,251); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><span style='color: rgb(255, 255, 255);'><a href='/NA/RA/H/home.html' style='text-decoration:none'><span style='color: rgb(0,0,0)'>Home</span></a></span></span></th>
+<th style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(130,202,251); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><span style='color: rgb(255, 255, 255);'><a href='/NA/RA/H/menu_coverage.html' style='text-decoration:none'><span style='color: rgb(0,0,0);'>Coverage</span></a></span></span></th>
+<th style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(130,202,251); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><span style='color: rgb(255, 255, 255);'><a href='/NA/RA/H/authorization.html' style='text-decoration:none'><span style='color: rgb(0,0,0);'>Authorizations</span></a></span></span></th>
+<th style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(130,202,251); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><a href='/NA/RA/H/skills.html' style='text-decoration:none'> 
+<span style='color: rgb(0,0,0);'>Skills</span></a></span></th>
+<th style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(130,202,251); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><a href='/NA/RA/H/industries.html' style='text-decoration:none'> 
+<span style='color: rgb(0,0,0);'>Industries</span></a></span></th>
+<th style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(130,202,251); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><a href='/RA_eus_drive.html' style='text-decoration:none'>
+<span style='color: rgb(0,0,0);'>Enterprise Units</span></a></span></th>
+<th style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(45,161,239); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><a href='/query_RA_eus.html' style='text-decoration:none'>
+<span style='color: rgb(0,0,0);'>Find a Partner</span></a></span></th>
+		</tr>
+	</tbody>
+</table>
+ 
+<div dir='ltr' style='text-align: center'>
+<em><span style='font-size: 16px'>Please select the desired filter options below. Each of your choices will further filter the results.</span></em></div>
+<div dir='ltr' style='text-align: center'>
+<em><span style='font-size: 16px'>For Example: Checking both <i>Southwest</i> and <i>BPM</i> will find all Partners</span></em></div>
+<div dir='ltr' style='text-align: center'>
+<em><span style='font-size: 16px'>selling in the <i>Southwest</i> Enterprise Unit that are top skilled in <i>BPM</i>.</span></em></div><p>
+<div dir='ltr' style='text-align: center'>
+<b>Important Note: Only TOP Skilled Partners will be returned from this query!</b></div>
+<div dir='ltr' style='text-align: center'>
+<em><span style='font-size: 20px'>North America * Rational</span></em></div>
+<p dir='ltr'> &nbsp;</p>
+<h2>Query Inputs</h2>
+<form action=cgi-bin/RAquery_eus.ksh>
+<fieldset>
+<p>
+<br />
+<label><b><i>US West</i></b></label>
+<br />
+<input type='radio'
+   name = 'eu'
+   value = 'eu_pacificnw' required='required'/>
+  <label for = 'chkEU1'>Pacific Northwest</label>
+<input type='radio'
+   name = 'eu'
+   value = 'eu_northca' required='required'/>
+  <label for = 'chkEU2'>North California</label>
+<input type='radio'
+   name = 'eu'
+   value = 'eu_southwest' required='required'/>
+  <label for = 'chkEU3'>Southwest</label>
+<input type='radio'
+   name = 'eu'
+   value = 'eu_rockies' required='required'/>
+  <label for = 'chkEU4'>Rockies</label>
+<br />
+<label><b><i>US Midwest</i></b></label>
+<br />
+<input type='radio'
+   name = 'eu'
+   value = 'eu_chicago' required='required'/>
+  <label for = 'chkEU5'>Chicago/Wisconsin</label>
+<input type='radio'
+   name = 'eu'
+   value = 'eu_minn' required='required'/>
+  <label for = 'chkEU6'>Minnesota/North Dakota</label>
+<input type='radio'
+   name = 'eu'
+   value = 'eu_plains' required='required'/>
+  <label for = 'chkEU7'>Plains</label>
+<input type='radio'
+   name = 'eu'
+   value = 'eu_heartland' required='required'/>
+  <label for = 'chkEU8'>Heartland</label>
+<input type='radio'
+   name = 'eu'
+   value = 'eu_texas' required='required'/>
+  <label for = 'chkEU9'>Texas/New Mexico</label>
+<input type='radio'
+   name = 'eu'
+   value = 'eu_gulf' required='required'/>
+  <label for = 'chkEU10'>Gulf Coast</label>
+<br />
+<label><b><i>US North</i></b></label>
+<br />
+<input type='radio'
+   name = 'eu'
+   value = 'eu_ny' required='required'/>
+  <label for = 'chkEU11'>NY Metro</label>
+<input type='radio'
+   name = 'eu'
+   value = 'eu_garden' required='required'/>
+  <label for = 'chkEU12'>Garden State</label>
+<input type='radio'
+   name = 'eu'
+   value = 'eu_northeast' required='required'/>
+  <label for = 'chkEU13'>Northeast</label>
+<br />
+<label><b><i>US Mid-Atlantic</i></b></label>
+<br />
+<input type='radio'
+   name = 'eu'
+   value = 'eu_delaware' required='required'/>
+  <label for = 'chkEU14'>Delaware Valley</label>
+<input type='radio'
+   name = 'eu'
+   value = 'eu_potomac' required='required'/>
+  <label for = 'chkEU15'>Potomac Valley</label>
+<input type='radio'
+   name = 'eu'
+   value = 'eu_carolinas' required='required'/>
+  <label for = 'chkEU16'>Carolinas</label>
+<br />
+<label><b><i>US Great Lakes/South</i></b></label>
+<br />
+<input type='radio'
+   name = 'eu'
+   value = 'eu_midamerica' required='required'/>
+  <label for = 'chkEU17'>Mid-America</label>
+<input type='radio'
+   name = 'eu'
+   value = 'eu_ohio' required='required'/>
+  <label for = 'chkEU18'>Ohio Valley</label>
+<input type='radio'
+   name = 'eu'
+   value = 'eu_southeast' required='required'/>
+  <label for = 'chkEU19'>Southeast</label>
+<input type='radio'
+   name = 'eu'
+   value = 'eu_sunshine' required='required'/>
+  <label for = 'chkEU20'>Sunshine Belt</label>
+<br />
+<label><b><i>Canada</i></b></label>
+<br />
+<input type='radio'
+   name = 'eu'
+   value = 'eu_ca_industry' required='required'/>
+  <label for = 'chkEU21'>Industry</label>
+<input type='radio'
+   name = 'eu'
+   value = 'eu_ca_enterpris' required='required'/>
+  <label for = 'chkEU22'>Enterprise</label>
+<input type='radio'
+   name = 'eu'
+   value = 'eu_ca_midmarket' required='required'/>
+  <label for = 'chkEU23'>Midmarket</label>
+<br />
+<label><b><i>Federal</i></b></label>
+<br />
+<input type='radio'
+   name = 'eu'
+   value = 'eu_fed_civ' required='required'/>
+  <label for = 'chkEU24'>Civilian</label>
+<input type='radio'
+   name = 'eu'
+   value = 'eu_fed_dod' required='required'/>
+  <label for = 'chkEU25'>DOD</label>
+</p>
+</fieldset>
+<fieldset>
+<p>
+<label><b><i>Skills:</i></b></label>
+<br />
+<p><em>Continuous Engineering</em><br />
+<input type='checkbox'
+   name = 'skill_01'
+   value = 'skill_01' />
+  <label for = 'chkSK'>Requirements Management (DOORS, DOORS NG)</label>
+<input type='checkbox'
+   name = 'skill_02'
+   value = 'skill_02' />
+  <label for = 'chkSK'>Modeling & Simulation (Rhapsody, System Architect)</label>
+<br />
+<input type='checkbox'
+   name = 'skill_03'
+   value = 'skill_03' />
+  <label for = 'chkSK'>Reporting, Analytics & Document Gen (RELM, RPE, Insight)</label>
+<input type='checkbox'
+   name = 'skill_04'
+   value = 'skill_04' />
+  <label for = 'chkSK'>Workflow, Change & Config Mgmt (Synergy, Change, ClearCase, ClearQuest)</label>
+<br />
+<p><em>DevOps</em><br />
+<input type='checkbox'
+   name = 'skill_05'
+   value = 'skill_05' />
+  <label for = 'chkSK'>Collaborative Dev (RTC, RQM, DOORS NG)</label>
+<input type='checkbox'
+   name = 'skill_06'
+   value = 'skill_06' />
+  <label for = 'chkSK'>Collaborative Arch & Design (Rational Design Mgr, RSA, RAD)</label>
+<br />
+<input type='checkbox'
+   name = 'skill_07'
+   value = 'skill_07' />
+  <label for = 'chkSK'>Continuous Business Planning (Focal Point)</label>
+<input type='checkbox'
+   name = 'skill_08'
+   value = 'skill_08' />
+  <label for = 'chkSK'>Continuous Release & Deployment (UC Release, UC Deploy)</label>
+<br />
+<input type='checkbox'
+   name = 'skill_09'
+   value = 'skill_09' />
+  <label for = 'chkSK'>Continuous Testing (RTW, Test Virtualization Server)</label>
+<input type='checkbox'
+   name = 'skill_10'
+   value = 'skill_10' />
+  <label for = 'chkSK'>Automated Testing (Rat. Functional Tester, Rat. Performance Tester)</label>
+<br />
+<input type='checkbox'
+   name = 'skill_11'
+   value = 'skill_11' />
+  <label for = 'chkSK'>Change & Config Mgmt (ClearCase, ClearQuest, CCMS, CQMS)</label>
+<p><em>Enterprise Modernization</em><br />
+<input type='checkbox'
+   name = 'skill_12'
+   value = 'skill_12' />
+  <label for = 'chkSK'>Application Modernization (HATS, HIS, HACP, Asset Analyzer)</label>
+<input type='checkbox'
+   name = 'skill_13'
+   value = 'skill_13' />
+  <label for = 'chkSK'>Compiler Modernization (C and C++, COBOL, Fortran, PL/I)</label>
+<br />
+<input type='checkbox'
+   name = 'skill_14'
+   value = 'skill_14' />
+  <label for = 'chkSK'>Development Modernization (RDz, RDi, RDB, Rational Dev for AIX/Linux)</label>
+<input type='checkbox'
+   name = 'skill_15'
+   value = 'skill_15' />
+  <label for = 'chkSK'>Host Test Modernization (Rat. Dev & Test, RSA, Rat. Test Virt. Server, RTW)</label>
+<br />
+</p>
+</fieldset>
+<input type='submit' value='Submit'>
+<input type='reset' value='Clear'>
+</form>
+<span style='font-size:9px; text-align:left;'>2.72a <a href='/cgi-bin/snap.ksh' class='no_show' target ='_blank'> - </a>2015-03-09 07:41:03 <a href='/cgi-bin/regen_RA.ksh' class='no_show' target = '_blank'> - </a><em>Please send feedback on the Partner Matrix Tool to <a href='http://faces.tap.ibm.com/#uid:5A8702897/john%20shoemaker/John%20Shoemaker' target='_blank'>John Shoemaker</a></em> &nbsp;</span>

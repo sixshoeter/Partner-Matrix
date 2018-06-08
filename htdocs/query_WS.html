@@ -1,0 +1,253 @@
+<html>
+<head>
+<title>NA-WS-Find a Partner</title>
+<link href='styles.css' rel='stylesheet' type='text/css'>
+<style> div {display: block;} </style>
+<script type='text/javascript'>
+function addImgAttributes()
+{
+var theImg = document.getElementById('theImgID');
+maxW = '300';
+maxH = '50';
+width = theImg.width;
+height = theImg.height;
+if( width == height )
+{
+   if (width > maxW )
+   {
+      nwidth = maxW;
+      nheight = maxW;
+   }
+   else
+   {
+      if (height > maxH )
+      {
+         nwidth = maxH;
+         nheight = maxH;
+      }
+      else
+      {
+         nwidth = width;
+         nheight = height;
+      }
+   }
+}
+else 
+{
+   if( width > height )
+   {
+      if (width > maxW )
+      {
+         nwidth = maxW;
+         nheight = height - height*((width - nwidth)/width);
+      }
+      else
+      {
+         if( height > maxH )
+         {
+            nheight = maxH;
+            nwidth = width - (width*((height - nheight)/height))
+         }
+         else
+         {
+            nwidth = width;
+            nheight = height;
+         }
+      }
+   }
+   else
+   {
+      if (height > maxH )
+      {
+         nheight = maxH;
+         nwidth = width - (width*((height - nheight)/height))
+      }
+      else
+      {
+         nwidth = width;
+         nheight = height;
+      }
+   }
+
+
+   theImg.setAttribute('width',nwidth);
+   theImg.setAttribute('style', 'width:',nwidth);
+   theImg.setAttribute('height',nheight);
+   theImg.setAttribute('style', 'height:',nheight);
+}
+}
+function togglerows(elementid) {
+   if( document.getElementById(elementid).style.display=='none' ){
+      document.getElementById(elementid).style.display = '';
+   }else{
+      document.getElementById(elementid).style.display = 'none';
+   }
+}
+</script>
+</head>
+<body onload='addImgAttributes();'></body>
+<div style='width: 125px; text-align: center; vertical-align: middle;'>
+<span style='font-size:14px;'><span style='color: rgb(255, 255, 255);'><a href='/index.html' style='text-decoration:none' class='no_show'>TOP Level</a></span></span></div>
+<table align='center' border='0' dir='ltr' style='width: 800px;'>
+<tbody>
+<tr>
+<th style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(102,146,241); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><span style='color: rgb(255, 255, 255);'><a href='/NA/WS/H/home.html' style='text-decoration:none'><span style='color: rgb(255,255,255)'>Home</span></a></span></span></th>
+<th style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(102,146,241); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><span style='color: rgb(255, 255, 255);'><a href='/NA/WS/H/menu_coverage.html' style='text-decoration:none'><span style='color: rgb(255,255,255);'>Coverage</span></a></span></span></th>
+<th style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(102,146,241); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><span style='color: rgb(255, 255, 255);'><a href='/NA/WS/H/authorization.html' style='text-decoration:none'><span style='color: rgb(255,255,255);'>Authorizations</span></a></span></span></th>
+<th style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(102,146,241); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><a href='/NA/WS/H/skills.html' style='text-decoration:none'> 
+<span style='color: rgb(255,255,255);'>Skills</span></a></span></th>
+<th style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(102,146,241); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><a href='/NA/WS/H/industries.html' style='text-decoration:none'> 
+<span style='color: rgb(255,255,255);'>Industries</span></a></span></th>
+<th style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(102,146,241); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><a href='/NA/WS/H/eus.html' style='text-decoration:none'>
+<span style='color: rgb(255,255,255);'>Enterprise Units</span></a></span></th>
+<th style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(28,40,205); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><a href='/query_WS_eus.html' style='text-decoration:none'>
+<span style='color: rgb(255,255,255);'>Find a Partner</span></a></span></th>
+		</tr>
+	</tbody>
+</table>
+ 
+<div dir='ltr' style='text-align: center'>
+<em><span style='font-size: 16px'>Please select the desired filter options below. Each of your choices will further filter the results.</span></em></div>
+<div dir='ltr' style='text-align: center'>
+<em><span style='font-size: 16px'>For Example: Checking both <i>Pacifics</i> and <i>Southeast</i> and checking <i>BPM</i> will find all Partners</span></em></div>
+<div dir='ltr' style='text-align: center'>
+<em><span style='font-size: 16px'>selling in BOTH the <i>Pacifics</i> and <i>Southeast</i> Business Units that are top skilled in <i>BPM</i>.</span></em></div><p>
+<div dir='ltr' style='text-align: center'>
+<b>Important Note: Only TOP Skilled Partners will be returned from this query!</b></div>
+<div dir='ltr' style='text-align: center'>
+<em><span style='font-size: 20px'>North America * Middleware</span></em></div>
+<p dir='ltr'> &nbsp;</p>
+<h2>Query Inputs</h2>
+<form action=cgi-bin/WSquery.ksh>
+<fieldset>
+<p>
+<label><b><i>Business Unit:</i></b></label>
+<br />
+<input type='radio'
+   name = 'bu'
+   value = 'bu_midwest' />
+  <label for = 'chkBU1'>Midwest</label>
+<input type='radio'
+   name = 'bu'
+   value = 'bu_pacifics' />
+  <label for = 'chkBU2'>Pacifics</label>
+<input type='radio'
+   name = 'bu'
+   value = 'bu_greatwest' />
+  <label for = 'chkBU3'>Great West</label>
+<input type='radio'
+   name = 'bu'
+   value = 'bu_southeast' />
+  <label for = 'chkBU4'>Southeast</label>
+<input type='radio'
+   name = 'bu'
+   value = 'bu_midatl' />
+  <label for = 'chkBU5'>Mid-Atlantic</label>
+<br />
+<input type='radio'
+   name = 'bu'
+   value = 'bu_ny' />
+  <label for = 'chkBU6'>New York</label>
+<input type='radio'
+   name = 'bu'
+   value = 'bu_northeast' />
+  <label for = 'chkBU7'>Northeast</label>
+<input type='radio'
+   name = 'bu'
+   value = 'bu_grtlakes' />
+  <label for = 'chkBU8'>Great Lakes</label>
+<input type='radio'
+   name = 'bu'
+   value = 'bu_federal' />
+  <label for = 'chkBU9'>Federal</label>
+<input type='radio'
+   name = 'bu'
+   value = 'bu_canada' />
+  <label for = 'chkBU10'>Canada</label>
+<br />
+</p>
+</fieldset>
+<fieldset>
+<p>
+<label><b><i>Skills:</i></b></label>
+<br />
+<input type='checkbox'
+   name = 'skill_'01'
+   value = 'skill_01' />
+  <label for = 'chkSK'>Pure Application</label>
+<input type='checkbox'
+   name = 'skill_'02'
+   value = 'skill_02' />
+  <label for = 'chkSK'>Application Server Family</label>
+<input type='checkbox'
+   name = 'skill_'03'
+   value = 'skill_03' />
+  <label for = 'chkSK'>eXtreme Scale</label>
+<input type='checkbox'
+   name = 'skill_'04'
+   value = 'skill_04' />
+  <label for = 'chkSK'>Integration Bus</label>
+<input type='checkbox'
+   name = 'skill_'05'
+   value = 'skill_05' />
+  <label for = 'chkSK'>MQ Suite</label>
+<br />
+<input type='checkbox'
+   name = 'skill_'06'
+   value = 'skill_06' />
+  <label for = 'chkSK'>DataPower Gateway</label>
+<input type='checkbox'
+   name = 'skill_'07'
+   value = 'skill_07' />
+  <label for = 'chkSK'>Cast Iron</label>
+<input type='checkbox'
+   name = 'skill_'08'
+   value = 'skill_08' />
+  <label for = 'chkSK'>MessageSight</label>
+<input type='checkbox'
+   name = 'skill_'09'
+   value = 'skill_09' />
+  <label for = 'chkSK'>API Management</label>
+<input type='checkbox'
+   name = 'skill_'10'
+   value = 'skill_10' />
+  <label for = 'chkSK'>WSRR</label>
+<br />
+<input type='checkbox'
+   name = 'skill_'11'
+   value = 'skill_11' />
+  <label for = 'chkSK'>WESB</label>
+<input type='checkbox'
+   name = 'skill_'12'
+   value = 'skill_12' />
+  <label for = 'chkSK'>BPM</label>
+<input type='checkbox'
+   name = 'skill_'13'
+   value = 'skill_13' />
+  <label for = 'chkSK'>ODM</label>
+<input type='checkbox'
+   name = 'skill_'14'
+   value = 'skill_14' />
+  <label for = 'chkSK'>Blueworks Live</label>
+<input type='checkbox'
+   name = 'skill_'15'
+   value = 'skill_15' />
+  <label for = 'chkSK'>Business Monitor</label>
+<br />
+<input type='checkbox'
+   name = 'skill_'16'
+   value = 'skill_16' />
+  <label for = 'chkSK'>MobileFirst Platform Foundation</label>
+</p>
+</fieldset>
+<input type='submit' value='Submit'>
+<input type='reset' value='Clear'>
+</form>
+<span style='font-size:9px; text-align:left;'>2.72a <a href='/cgi-bin/snap.ksh' class='no_show' target ='_blank'> - </a>2015-03-10 10:26:50 <a href='/cgi-bin/regen_WS.ksh' class='no_show' target = '_blank'> - </a><em>Please send feedback on the Partner Matrix Tool to <a href='http://faces.tap.ibm.com/#uid:5A8702897/john%20shoemaker/John%20Shoemaker' target='_blank'>John Shoemaker</a></em> &nbsp;</span>

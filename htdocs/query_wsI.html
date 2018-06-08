@@ -1,0 +1,355 @@
+
+<h1>Find a Partner</h1>
+Please select the desired filter options below. Each of your choices will further filter the results. <p>
+
+For Example: Checking both <i>Pacifics</i> and <i>Southeast</i> and checking <i>BPM</i> will find all Partners selling in BOTH the <i>Pacifics</i> and <i>Southeast</i> Business Units that are top skilled in <i>BPM</i>.  
+<p>
+
+<b>Important Note: Only TOP Skilled Partners will be returned from this query!</b>
+ 
+<p dir='ltr'> &nbsp;</p>
+
+<h2>Query Inputs</h2>
+<form action=cgi-bin/WSquery.ksh>
+
+   <fieldset>
+      <p>
+         <label><b><i>Business Unit:</i></b></label>
+<br />
+            <input type='radio'
+               name='bu'
+               value = 'bu_midwest' />
+            <lable for = 'chkBU1'>Midwest</label>
+
+	    <input type='radio'
+               name='bu'
+               value = 'bu_pacifics' />
+            <lable for = 'chkBU2'>Pacifics</label>
+
+            <input type='radio'
+               name='bu'
+               value = 'bu_greatwest' />
+            <lable for = 'chkBU3'>Great West</label>
+
+            <input type='radio'
+               name='bu'
+               value = 'bu_southeast' />
+            <lable for = 'chkBU4'>Southeast</label>
+
+            <input type='radio'
+               name='bu'
+               value = 'bu_midatl' />
+            <lable for = 'chkBU5'>Mid-Atlantic</label>
+<br />
+
+            <input type='radio'
+               name='bu'
+               value = 'bu_ny' />
+            <lable for = 'chkBU6'>New York</label>
+
+            <input type='radio'
+               name='bu'
+               value = 'bu_northesast' />
+            <lable for = 'chkBU7'>Northeast</label>
+
+            <input type='radio'
+               name='bu'
+               value = 'bu_grtlakes' />
+            <lable for = 'chkBU8'>Great Lakes</label>
+
+            <input type='radio'
+               name='bu'
+               value = 'bu_federal' />
+            <lable for = 'chkBU9'>Federal</label>
+
+            <input type='radio'
+               name='bu'
+               value = 'bu_canada' />
+            <lable for = 'chkBU10'>Canada</label>
+      </p>
+   </fieldset>
+
+   <h2>Skills:</h2>
+<table>
+<tr>
+<td>
+   <fieldset>
+      <p>
+         <label><b><i>MQ</i></b></label>
+<br />
+            <input type='radio'
+               name='skill_01'
+               value = '3'
+            <lable for = 'chkSK'>TOP Skilled</label>
+
+            <input type='radio'
+               name='skill_01'
+               value = '2' />
+            <lable for = 'chkSK'>Tier 2 Skill</label>
+
+            <input type='radio'
+               name='skill_01'
+               value = '1' />
+            <lable for = 'chkSK'>LOW Skilled</label>
+</fieldset>
+</td>
+<td>
+   <fieldset>
+      <p>
+         <label><b><i>Message Broker</i></b></label>
+<br />
+            <input type='radio'
+               name='skill_02'
+               value = '3' 
+            <lable for = 'chkSK'>TOP Skilled</label>
+
+            <input type='radio'
+               name='skill_02'
+               value = '2' 
+            <lable for = 'chkSK'>Tier 2 Skill</label>
+
+            <input type='radio'
+               name='skill_02'
+               value = '1' 
+            <lable for = 'chkSK'>LOW Skilled</label>
+
+</fieldset>
+</td>
+
+<td>
+   <fieldset>
+      <p>
+         <label><b><i>WESB</i></b></label>
+<br />
+            <input type='radio'
+               name='skill_03'
+               value = '3' />
+            <lable for = 'chkSK'>TOP Skilled</label>
+
+            <input type='radio'
+               name='skill_03'
+               value = '2' />
+            <lable for = 'chkSK'>Tier 2 Skill</label>
+
+            <input type='radio'
+               name='skill_03'
+               value = '1' />
+            <lable for = 'chkSK'>LOW Skilled</label>
+</td>
+</tr>
+
+<tr>
+<td>
+   <fieldset>
+      <p>
+         <label><b><i>BPM</i></b></label>
+<br />
+            <input type='radio'
+               name='skill_04'
+               value = '3' />
+            <lable for = 'chkSK'>TOP Skilled</label>
+
+            <input type='radio'
+               name='skill_04'
+               value = '2' />
+            <lable for = 'chkSK'>Tier 2 Skill</label>
+
+            <input type='radio'
+               name='skill_04'
+               value = '1' />
+            <lable for = 'chkSK'>LOW Skilled</label>
+</fieldset>
+</td>
+<td>
+   <fieldset>
+      <p>
+         <label><b><i>ODM</i></b></label>
+<br />
+            <input type='radio'
+               name='skill_05'
+               value = '3' />
+            <lable for = 'chkSK'>TOP Skilled</label>
+
+            <input type='radio'
+               name='skill_05'
+               value = '2' />
+            <lable for = 'chkSK'>Tier 2 Skill</label>
+
+            <input type='radio'
+               name='skill_05'
+               value = '1' />
+            <lable for = 'chkSK'>LOW Skilled</label>
+</fieldset>
+</td>
+<td>
+   <fieldset>
+      <p>
+         <label><b><i>DataPower</i></b></label>
+<br />
+            <input type='radio'
+               name='skill_06'
+               value = '3' />
+            <lable for = 'chkSK'>TOP Skilled</label>
+
+            <input type='radio'
+               name='skill_06'
+               value = '2' />
+            <lable for = 'chkSK'>Tier 2 Skill</label>
+
+            <input type='radio'
+               name='skill_06'
+               value = '1' />
+            <lable for = 'chkSK'>LOW Skilled</label>
+   </fieldset>
+</td>
+</tr>
+
+<tr>
+<td>
+
+   <fieldset>
+      <p>
+         <label><b><i>Cast Iron</i></b></label>
+<br />
+            <input type='radio'
+               name='skill_07'
+               value = '3' />
+            <lable for = 'chkSK'>TOP Skilled</label>
+
+            <input type='radio'
+               name='skill_07'
+               value = '2' />
+            <lable for = 'chkSK'>Tier 2 Skill</label>
+
+            <input type='radio'
+               name='skill_07'
+               value = '1' />
+            <lable for = 'chkSK'>LOW Skilled</label>
+
+   </fieldset>
+</td>
+<td>
+   <fieldset>
+      <p>
+         <label><b><i>WAS</i></b></label>
+<br />
+            <input type='radio'
+               name='skill_08'
+               value = '3' />
+            <lable for = 'chkSK'>TOP Skilled</label>
+
+            <input type='radio'
+               name='skill_08'
+               value = '2' />
+            <lable for = 'chkSK'>Tier 2 Skill</label>
+
+            <input type='radio'
+               name='skill_08'
+               value = '1' />
+            <lable for = 'chkSK'>LOW Skilled</label>
+   </fieldset>
+</td>
+<td>
+   <fieldset>
+      <p>
+         <label><b><i>eXtreme Scale</i></b></label>
+<br />
+            <input type='radio'
+               name='skill_09'
+               value = '3' />
+            <lable for = 'chkSK'>TOP Skilled</label>
+
+            <input type='radio'
+               name='skill_09'
+               value = '2' />
+            <lable for = 'chkSK'>Tier 2 Skill</label>
+
+            <input type='radio'
+               name='skill_09'
+               value = '1' />
+            <lable for = 'chkSK'>LOW Skilled</label>
+   </fieldset>
+</td>
+</tr>
+
+<tr>
+<td>
+   <fieldset>
+      <p>
+         <label><b><i>Mobile / Worklight</i></b></label>
+<br />
+            <input type='radio'
+               name='skill_11'
+               value = '3' />
+            <lable for = 'chkSK'>TOP Skilled</label>
+
+            <input type='radio'
+               name='skill_11'
+               value = '2' />
+            <lable for = 'chkSK'>Tier 2 Skill</label>
+
+            <input type='radio'
+               name='skill_11'
+               value = '1' />
+            <lable for = 'chkSK'>LOW Skilled</label>
+
+   </fieldset>
+</td>
+<td>
+   <fieldset>
+      <p>
+         <label><b><i>Pure Application</i></b></label>
+<br />
+            <input type='radio'
+               name='skill_12'
+               value = '3' />
+            <lable for = 'chkSK'>TOP Skilled</label>
+
+            <input type='radio'
+               name='skill_12'
+               value = '2' />
+            <lable for = 'chkSK'>Tier 2 Skill</label>
+
+            <input type='radio'
+               name='skill_12'
+               value = '1' />
+            <lable for = 'chkSK'>LOW Skilled</label>
+
+      </p>
+   </fieldset>
+</td>
+</tr>
+</table>
+<!--
+   <fieldset>
+      <p>
+         <label><b><i>Skill Level (Optional Selection):</i></b></label>
+<br />
+            <input type='radio'
+               name='skill_level'
+               value = '3' 
+               checked = 'checked' />
+            <lable for = 'chkSL'>TOP Skilled</label>
+
+            <input type='radio'
+               name='skill_level'
+               value = '3' />
+            <lable for = 'chkSL'>Level 2 Skill</label>
+
+            <input type='radio'
+               name='skill_level'
+               value = '3' />
+            <lable for = 'chkSL'>Level 1 Skill<label>
+
+	    <input type='radio'
+               name='skill_04'
+               value = '3' />
+            <lable for = 'chkSK'>No Skill</label>
+      </p>
+      </fieldset>
+      -->
+            <input type='submit' value='Submit'>
+</form>
+
+
+

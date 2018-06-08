@@ -1,0 +1,167 @@
+<html>
+<head>
+<title>NA-BA-Enterprise Unit</title>
+<link href='styles.css' rel='stylesheet' type='text/css'>
+<style> div {display: block;} </style>
+<script type='text/javascript'>
+function addImgAttributes()
+{
+var theImg = document.getElementById('theImgID');
+maxW = '300';
+maxH = '50';
+width = theImg.width;
+height = theImg.height;
+if( width == height )
+{
+   if (width > maxW )
+   {
+      nwidth = maxW;
+      nheight = maxW;
+   }
+   else
+   {
+      if (height > maxH )
+      {
+         nwidth = maxH;
+         nheight = maxH;
+      }
+      else
+      {
+         nwidth = width;
+         nheight = height;
+      }
+   }
+}
+else 
+{
+   if( width > height )
+   {
+      if (width > maxW )
+      {
+         nwidth = maxW;
+         nheight = height - height*((width - nwidth)/width);
+      }
+      else
+      {
+         if( height > maxH )
+         {
+            nheight = maxH;
+            nwidth = width - (width*((height - nheight)/height))
+         }
+         else
+         {
+            nwidth = width;
+            nheight = height;
+         }
+      }
+   }
+   else
+   {
+      if (height > maxH )
+      {
+         nheight = maxH;
+         nwidth = width - (width*((height - nheight)/height))
+      }
+      else
+      {
+         nwidth = width;
+         nheight = height;
+      }
+   }
+
+
+   theImg.setAttribute('width',nwidth);
+   theImg.setAttribute('style', 'width:',nwidth);
+   theImg.setAttribute('height',nheight);
+   theImg.setAttribute('style', 'height:',nheight);
+}
+}
+function togglerows(elementid) {
+   if( document.getElementById(elementid).style.display=='none' ){
+      document.getElementById(elementid).style.display = '';
+   }else{
+      document.getElementById(elementid).style.display = 'none';
+   }
+}
+</script>
+</head>
+<body onload='addImgAttributes();'></body>
+<div style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(0,0,0); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><span style='color: rgb(255, 255, 255);'><a href='/index.html' style='text-decoration:none'><span style='color: rgb(255,255,255);'><em>TOP Level</em></span></a></span></span></div>
+<table align='center' border='0' dir='ltr' style='width: 800px;'>
+<tbody>
+<tr>
+<th style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(160,156,156); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><span style='color: rgb(255, 255, 255);'><a href='/NA/BA/H/home.html' style='text-decoration:none'><span style='color: rgb(255,255,255)'>Home</span></a></span></span></th>
+<th style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(160,156,156); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><span style='color: rgb(255, 255, 255);'><a href='/NA/BA/H/menu_coverage.html' style='text-decoration:none'><span style='color: rgb(255,255,255);'>Coverage</span></a></span></span></th>
+<th style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(160,156,156); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><span style='color: rgb(255, 255, 255);'><a href='/NA/BA/H/authorization.html' style='text-decoration:none'><span style='color: rgb(255,255,255);'>Authorizations</span></a></span></span></th>
+<th style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(160,156,156); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><a href='/NA/BA/H/skills.html' style='text-decoration:none'> 
+<span style='color: rgb(255,255,255);'>Skills</span></a></span></th>
+<th style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(160,156,156); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><a href='/NA/BA/H/industries.html' style='text-decoration:none'> 
+<span style='color: rgb(255,255,255);'>Industries</span></a></span></th>
+<th style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(0,0,0); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><a href='/BA_eus_drive.html' style='text-decoration:none'>
+<span style='color: rgb(255,255,255);'>Enterprise Units</span></a></span></th>
+<th style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(160,156,156); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><a href='/query_BA_eus.html' style='text-decoration:none'>
+<span style='color: rgb(255,255,255);'>Find a Partner</span></a></span></th>
+		</tr>
+	</tbody>
+</table>
+ 
+<div dir='ltr' style='text-align: center'>
+	<em><span style='font-size: 16px'>The Partners listed below are selling into these Enterprise Units. </span></em></div>
+<div dir='ltr' style='text-align: center'>
+	<em><span style='font-size: 16px'>Those Partners with 'top' skills have the skills listed in (parens).</span></em></div><p>
+<div dir='ltr' style='text-align: center'>
+</div><p>
+<div dir='ltr' style='text-align: center'>
+<em><span style='font-size: 20px'>North America * Business Analytics</span></em></div>
+<p>
+<form class='regForm' id='regionForm' action=cgi-bin/BA_eus_drive.ksh METHOD='GET'>
+<fieldset>
+<legend>Select Region / Enterprise Unit</legend>
+<p>
+<label Select list</label>
+<select id='regList' name='regList' onchange='this.form.submit()'>
+<option value='0'>Make section here</option>
+<option value='1'>US West - Pacific Northwest</option>
+<option value='2'>US West - North California</option>
+<option value='3'>US West - Southwest</option>
+<option value='4'>US West - Rockies</option>
+<option value='5'>US Midwest - Chicago/Wisconsin</option>
+<option value='6'>US Midwest - Minnesota/North Dakota</option>
+<option value='7'>US Midwest - Plains</option>
+<option value='8'>US Midwest - Heartland</option>
+<option value='9'>US Midwest - Texas/New Mexico</option>
+<option value='10'>US Midwest - Gulf Coast</option>
+<option value='11'>US North - NY Metro</option>
+<option value='12'>US North - Garden State</option>
+<option value='13'>US North - Northeast</option>
+<option value='14'>US Mid-Atlantic - Delaware Valley</option>
+<option value='15'>US Mid-Atlantic - Potomac Valley</option>
+<option value='16'>US Mid-Atlantic - Carolinas</option>
+<option value='17'>US Great Lakes/South - Mid-America</option>
+<option value='18'>US Great Lakes/South - Ohio Valley</option>
+<option value='19'>US Great Lakes/South - Southeast</option>
+<option value='20'>US Great Lakes/South - Sunshine Belt</option>
+<option value='21'>Canada - Industry</option>
+<option value='22'>Canada - Enterprise</option>
+<option value='23'>Canada - Midmarket</option>
+<option value='24'>Federal - Civilian</option>
+<option value='25'>Federal - DOD</option>
+</select>
+</p>
+</fieldset>
+<noscript>
+<input type='submit' value='Submit'>
+<input type='reset' value='Clear'>
+</noscript>
+</form>
+</div>
+<p dir='ltr'> &nbsp;</p>
+<span style='font-size:9px; text-align:left;'>2.72a <a href='/cgi-bin/snap.ksh' class='no_show' target ='_blank'> - </a>2015-03-09 07:28:03 <a href='/cgi-bin/regen_BA.ksh' class='no_show' target = '_blank'> - </a><em>Please send feedback on the Partner Matrix Tool to <a href='http://faces.tap.ibm.com/#uid:5A8702897/john%20shoemaker/John%20Shoemaker' target='_blank'>John Shoemaker</a></em> &nbsp;</span>

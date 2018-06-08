@@ -1,0 +1,266 @@
+<html>
+<head>
+<title>NA-EM-Find a Partner</title>
+<link href='styles.css' rel='stylesheet' type='text/css'>
+<style> div {display: block;} </style>
+<script type='text/javascript'>
+function addImgAttributes()
+{
+var theImg = document.getElementById('theImgID');
+maxW = '300';
+maxH = '50';
+width = theImg.width;
+height = theImg.height;
+if( width == height )
+{
+   if (width > maxW )
+   {
+      nwidth = maxW;
+      nheight = maxW;
+   }
+   else
+   {
+      if (height > maxH )
+      {
+         nwidth = maxH;
+         nheight = maxH;
+      }
+      else
+      {
+         nwidth = width;
+         nheight = height;
+      }
+   }
+}
+else 
+{
+   if( width > height )
+   {
+      if (width > maxW )
+      {
+         nwidth = maxW;
+         nheight = height - height*((width - nwidth)/width);
+      }
+      else
+      {
+         if( height > maxH )
+         {
+            nheight = maxH;
+            nwidth = width - (width*((height - nheight)/height))
+         }
+         else
+         {
+            nwidth = width;
+            nheight = height;
+         }
+      }
+   }
+   else
+   {
+      if (height > maxH )
+      {
+         nheight = maxH;
+         nwidth = width - (width*((height - nheight)/height))
+      }
+      else
+      {
+         nwidth = width;
+         nheight = height;
+      }
+   }
+
+
+   theImg.setAttribute('width',nwidth);
+   theImg.setAttribute('style', 'width:',nwidth);
+   theImg.setAttribute('height',nheight);
+   theImg.setAttribute('style', 'height:',nheight);
+}
+}
+function togglerows(elementid) {
+   if( document.getElementById(elementid).style.display=='none' ){
+      document.getElementById(elementid).style.display = '';
+   }else{
+      document.getElementById(elementid).style.display = 'none';
+   }
+}
+</script>
+</head>
+<body onload='addImgAttributes();'></body>
+<div style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(32,95,171); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><span style='color: rgb(255, 255, 255);'><a href='/index.html' style='text-decoration:none'><span style='color: rgb(255,255,255);'><em>TOP Level</em></span></a></span></span></div>
+<table align='center' border='0' dir='ltr' style='width: 800px;'>
+<tbody>
+<tr>
+<th style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(98,146,206); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><span style='color: rgb(255, 255, 255);'><a href='/NA/EM/H/home.html' style='text-decoration:none'><span style='color: rgb(255,255,255)'>Home</span></a></span></span></th>
+<th style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(98,146,206); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><span style='color: rgb(255, 255, 255);'><a href='/NA/EM/H/menu_coverage.html' style='text-decoration:none'><span style='color: rgb(255,255,255);'>Coverage</span></a></span></span></th>
+<th style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(98,146,206); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><span style='color: rgb(255, 255, 255);'><a href='/NA/EM/H/authorization.html' style='text-decoration:none'><span style='color: rgb(255,255,255);'>Authorizations</span></a></span></span></th>
+<th style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(98,146,206); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><a href='/NA/EM/H/skills.html' style='text-decoration:none'> 
+<span style='color: rgb(255,255,255);'>Skills</span></a></span></th>
+<th style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(98,146,206); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><a href='/NA/EM/H/industries.html' style='text-decoration:none'> 
+<span style='color: rgb(255,255,255);'>Industries</span></a></span></th>
+<th style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(98,146,206); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><a href='/EM_eus_drive.html' style='text-decoration:none'>
+<span style='color: rgb(255,255,255);'>Enterprise Units</span></a></span></th>
+<th style='width: 125px; text-align: center; vertical-align: middle; background-color: rgb(32,95,171); border-color: rgb(255, 255, 255); border-style: solid; border-width: 2px;'>
+<span style='font-size:14px;'><a href='/query_EM_eus.html' style='text-decoration:none'>
+<span style='color: rgb(255,255,255);'>Find a Partner</span></a></span></th>
+		</tr>
+	</tbody>
+</table>
+ 
+<div dir='ltr' style='text-align: center'>
+<em><span style='font-size: 16px'>Please select the desired filter options below. Each of your choices will further filter the results.</span></em></div>
+<div dir='ltr' style='text-align: center'>
+<em><span style='font-size: 16px'>For Example: Checking both <i>Pacifics</i> and <i>Southeast</i> and checking <i>BPM</i> will find all Partners</span></em></div>
+<div dir='ltr' style='text-align: center'>
+<em><span style='font-size: 16px'>selling in BOTH the <i>Pacifics</i> and <i>Southeast</i> Business Units that are top skilled in <i>BPM</i>.</span></em></div><p>
+<div dir='ltr' style='text-align: center'>
+<b>Important Note: Only TOP Skilled Partners will be returned from this query!</b></div>
+<div dir='ltr' style='text-align: center'>
+<em><span style='font-size: 20px'>North America * Enterprise Content Mgmt</span></em></div>
+<p dir='ltr'> &nbsp;</p>
+<h2>Query Inputs</h2>
+<form action=cgi-bin/EMquery.ksh>
+<fieldset>
+<p>
+<label><b><i>Business Unit:</i></b></label>
+<br />
+<input type='radio'
+   name = 'bu'
+   value = '' />
+  <label for = 'chkBU'></label>
+<input type='radio'
+   name = 'bu'
+   value = '' />
+  <label for = 'chkBU'></label>
+<input type='radio'
+   name = 'bu'
+   value = '' />
+  <label for = 'chkBU'></label>
+<input type='radio'
+   name = 'bu'
+   value = '' />
+  <label for = 'chkBU'></label>
+<input type='radio'
+   name = 'bu'
+   value = '' />
+  <label for = 'chkBU'></label>
+<br />
+<input type='radio'
+   name = 'bu'
+   value = '' />
+  <label for = 'chkBU'></label>
+<input type='radio'
+   name = 'bu'
+   value = '' />
+  <label for = 'chkBU'></label>
+<input type='radio'
+   name = 'bu'
+   value = '' />
+  <label for = 'chkBU'></label>
+<input type='radio'
+   name = 'bu'
+   value = '' />
+  <label for = 'chkBU'></label>
+<input type='radio'
+   name = 'bu'
+   value = '' />
+  <label for = 'chkBU'></label>
+<br />
+</p>
+</fieldset>
+<fieldset>
+<p>
+<label><b><i>Skills:</i></b></label>
+<br />
+<input type='checkbox'
+   name = 'skill_'01'
+   value = 'skill_01' />
+  <label for = 'chkSK'>Datacap</label>
+<input type='checkbox'
+   name = 'skill_'02'
+   value = 'skill_02' />
+  <label for = 'chkSK'>Production Imaging Edition</label>
+<input type='checkbox'
+   name = 'skill_'03'
+   value = 'skill_03' />
+  <label for = 'chkSK'>IBM Content Navigator</label>
+<input type='checkbox'
+   name = 'skill_'04'
+   value = 'skill_04' />
+  <label for = 'chkSK'>FileNet Content Manager</label>
+<input type='checkbox'
+   name = 'skill_'05'
+   value = 'skill_05' />
+  <label for = 'chkSK'>IBM Content Manager</label>
+<input type='checkbox'
+   name = 'skill_'06'
+   value = 'skill_06' />
+  <label for = 'chkSK'>Content Manager OnDemand</label>
+<input type='checkbox'
+   name = 'skill_'07'
+   value = 'skill_07' />
+  <label for = 'chkSK'>FileNet Image Services/Manager</label>
+<input type='checkbox'
+   name = 'skill_'08'
+   value = 'skill_08' />
+  <label for = 'chkSK'>Social Content Management</label>
+<input type='checkbox'
+   name = 'skill_'09'
+   value = 'skill_09' />
+  <label for = 'chkSK'>IBM Case Manager</label>
+<input type='checkbox'
+   name = 'skill_'10'
+   value = 'skill_10' />
+  <label for = 'chkSK'>IBM Case Foundation</label>
+<input type='checkbox'
+   name = 'skill_'12'
+   value = 'skill_12' />
+  <label for = 'chkSK'>Atlas</label>
+<input type='checkbox'
+   name = 'skill_'13'
+   value = 'skill_13' />
+  <label for = 'chkSK'>StoredIQ</label>
+<input type='checkbox'
+   name = 'skill_'14'
+   value = 'skill_14' />
+  <label for = 'chkSK'>IBM Content Collector</label>
+<input type='checkbox'
+   name = 'skill_'15'
+   value = 'skill_15' />
+  <label for = 'chkSK'>IBM Content Collector for SAP</label>
+<input type='checkbox'
+   name = 'skill_'16'
+   value = 'skill_16' />
+  <label for = 'chkSK'>eDiscovery</label>
+<input type='checkbox'
+   name = 'skill_'17'
+   value = 'skill_17' />
+  <label for = 'chkSK'>IBM Enterprise Records</label>
+<input type='checkbox'
+   name = 'skill_'18'
+   value = 'skill_18' />
+  <label for = 'chkSK'>IBM Navigator</label>
+<input type='checkbox'
+   name = 'skill_'19'
+   value = 'skill_19' />
+  <label for = 'chkSK'>Partner Cloud Solutions</label>
+<input type='checkbox'
+   name = 'skill_'20'
+   value = 'skill_20' />
+  <label for = 'chkSK'>Content Classification</label>
+<input type='checkbox'
+   name = 'skill_'21'
+   value = 'skill_21' />
+  <label for = 'chkSK'>Watson Curator</label>
+</p>
+</fieldset>
+<input type='submit' value='Submit'>
+<input type='reset' value='Clear'>
+</form>
+<span style='font-size:9px; text-align:left;'>2.72a <a href='/cgi-bin/snap.ksh' class='no_show' target ='_blank'> - </a>2015-03-09 07:27:04 <a href='/cgi-bin/regen_EM.ksh' class='no_show' target = '_blank'> - </a><em>Please send feedback on the Partner Matrix Tool to <a href='http://faces.tap.ibm.com/#uid:5A8702897/john%20shoemaker/John%20Shoemaker' target='_blank'>John Shoemaker</a></em> &nbsp;</span>
