@@ -12,11 +12,11 @@ CEID=`echo $1 | awk '{print $1}' | awk -F ':' '{print $1}'`
 DATEFMT="+%Y%m%d%H%M%S"
 
 #write record to file
-varstr="ceid="$CEID"&brand=NC"
-echo NC:`date $DATEFMT`:$varstr >> /data/logs/eu-top_history.log
+varstr="$CEID"
+echo NC:`date $DATEFMT`:$varstr >> /data/logs/eu-showOldCEID.log
 
 # call dynamic page
-$INFORMIXDIR/bin/fglgo $HOME/code-eu/SHOWTOP partners_eu EU NC 
+$INFORMIXDIR/bin/fglgo $HOME/code-eu/nBUILDPAGESU partners_eu EU NC "$CEID" 0
 
 echo "</body>"
 echo "</html>"

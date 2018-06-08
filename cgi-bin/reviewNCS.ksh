@@ -13,10 +13,10 @@ DATEFMT="+%Y%m%d%H%M%S"
 
 #write record to file
 varstr="ceid="$CEID"&brand=NC"
-echo NC:`date $DATEFMT`:$varstr >> /data/logs/eu-top_history.log
+echo NC:`date $DATEFMT`:$varstr >> /data/logs/eu-review_history.log
 
 # call dynamic page
-$INFORMIXDIR/bin/fglgo $HOME/code-eu/SHOWTOP partners_eu EU NC 
+$INFORMIXDIR/bin/fglgo $HOME/code-eu/REVIEW partners_eu EU NC $varstr
 
 echo "</body>"
 echo "</html>"

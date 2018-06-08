@@ -1,7 +1,7 @@
 #!/bin/ksh
 
 . /home/informix/.profile
-. /home/informix/shoe/.profile
+. /opt/pm/.profile
 
 var1="$QUERY_STRING"
 CEID=""
@@ -22,7 +22,7 @@ DATEFMT="+%Y%m%d%H%M%S"
 #echo ES:$CEID:`date $DATEFMT`:$YNAME >> /data/logs/add_history.log
 
 # generate progress page
-$INFORMIXDIR/bin/fglgo /home/informix/shoe/code/SHOWCOMPLEVEL partners_na NA NC "$CEID" "$YNAME"
+$INFORMIXDIR/bin/fglgo $HOME/code-eu/SHOWCOMPLEVEL partners_eu EU NC "$CEID" "$YNAME"
 
 echo "</body>"
 echo "</html>"
