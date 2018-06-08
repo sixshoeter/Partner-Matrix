@@ -1,0 +1,28 @@
+#!/bin/ksh
+
+##***********************************************************************
+### Copyright (c) 2013-2014 IBM
+###
+### run_pm
+###  by: John M. Shoemaker, jshoe@us.ibm.com, jshoemaker1@cox.net
+###      
+###     
+
+###
+###
+###
+###
+###
+##***********************************************************************
+
+
+. /home/informix/shoe/.profile
+
+DATEFMT='+%Y%m'
+LOGNM=run_pm.`date $DATEFMT`.log
+LOGFILE=$LOGDIR/$LOGNM
+
+echo $USER `date` >> $LOGFILE
+
+isql partners_na -ur 
+
