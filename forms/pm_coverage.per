@@ -1,0 +1,22 @@
+database partners_na
+screen size 24 by 80
+{
+*** PARTNER  ***
+CEID: [p01       ]
+NAME: [p02                                                         ]
+
+
+}
+end
+
+tables
+   coverage_ws
+
+attributes
+p01 = coverage_ws.ceid;
+p02 = coverage_ws.part_name;
+
+instructions
+   delimiters "()";
+
+end

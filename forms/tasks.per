@@ -1,0 +1,44 @@
+database partners_na
+screen size 24 by 80
+{
+=============================================================================
+                        TASK AND REQUEST LIST FOR PARTNER MATRIX
+=============================================================================
+Task Number:[f000       ] Status: [a]
+  Requestor:[f002                     ]
+      Title:[f002t                                            ]
+Description:[f003                                                ]
+            [f003                                                ]
+            [f003                                                ]
+            [f003                                                ]
+            [f003                                            ]
+
+    Results:[f009                                                ]
+            [f009                                                ]
+            [f009                                                ]
+            [f009                                                ]
+            [f009                                            ]
+  Date Opened: [f001      ]
+  Date Closed: [f008      ]
+}
+end
+
+tables
+   tasks
+
+attributes
+f000 = tasks.task_num;
+a = tasks.task_status, upshift, autonext, required, include=('C','H','O','R','D','X','N'),
+    comments="ENTRY==> C(losed),H(old),O(pen),R(eview),D(enied),X(cancelled),(N)ext Review ";
+f002 = tasks.task_requestor, required;
+f002t = tasks.task_title, required;
+f003 = tasks.task_desc, wordwrap compress;
+f009 = tasks.task_result, wordwrap compress;
+f001 = tasks.task_odt, required, default=today;
+f008 = tasks.task_cdt;
+
+instructions
+   delimiters "()"
+
+end
+

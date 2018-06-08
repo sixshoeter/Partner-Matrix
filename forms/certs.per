@@ -1,0 +1,43 @@
+database partners_na
+screen size 24 by 80
+{
+geo                 [f000           ]
+country             [f001                ]
+ww_ent_id           [f002      ]
+ceid                [f003      ]
+part_name           [f004                          ]
+                    [f005                          ]
+cert_type           [f006     ]
+cert_num            [f007    ]
+cert_desc           [f008                                              ]
+                    [f009                                              ]
+person_num          [f010                ]
+report_dt           [f011      ]
+achieve_dt          [f012      ]
+sunset_dt           [f013      ]
+prod_group          [f014                          ]
+brand               [f015 ]
+svp_country         [a]
+}
+end
+tables
+certs
+attributes
+f000 = certs.geo;
+f001 = certs.country;
+f002 = certs.ww_ent_id;
+f003 = certs.ceid;
+f004 = certs.part_name[1,30];
+f005 = certs.part_name[31,60];
+f006 = certs.cert_type;
+f007 = certs.cert_num;
+f008 = certs.cert_desc[1,50];
+f009 = certs.cert_desc[51,100];
+f010 = certs.person_num;
+f011 = certs.report_dt;
+f012 = certs.achieve_dt;
+f013 = certs.sunset_dt;
+f014 = certs.prod_group;
+f015 = certs.brand;
+a = certs.svp_country;
+end

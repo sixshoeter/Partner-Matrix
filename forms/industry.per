@@ -1,0 +1,37 @@
+database partners_na
+screen size 24 by 80
+{
+
+\g---\g INDUSTRIES \g-------------------------------------------------------------\g
+
+      BRAND: [a0][a0lk                            ]
+
+         ID: [f0]
+
+   Industry 
+      Group: [g01                                ]
+
+ Short Name: [f001      ]
+
+Longer Name: [f002                               ]
+
+}
+end
+tables
+industry
+brands
+
+attributes
+a0 = industry.i_brand, upshift, autonext, lookup a0lk=brands.b_name joining *brands.b_id;
+f0 = industry.i_id, required, 
+     comments="Sort Order within the Brand";
+g01 = industry.ig_name;
+f001 = industry.i_short, required, 
+       comments="Short Name";
+f002 = industry.i_name, required,
+       comments="Longer Name";
+
+instructions
+   delimiters "()"
+
+end

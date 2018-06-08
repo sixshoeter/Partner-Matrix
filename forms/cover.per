@@ -1,0 +1,34 @@
+database partners_na
+screen size 24 by 80
+{
+
+*** PARTNER  ***
+CEID: [p01       ]
+NAME: [p02                                                         ]
+
+
+*** ASSIGNMENTS ***
+IBM Brand Rep Name [p03                           ]
+IBM TSS Rep Name   [p04                           ]
+
+C-I-O Code [c]
+
+
+}
+end
+
+tables
+   coverage_im_eus
+
+attributes
+p01 = coverage_im_eus.ceid, noentry, noupdate;
+p02 = coverage_im_eus.part_name, noentry, noupdate;
+p03 = coverage_im_eus.ssr;
+p04 = coverage_im_eus.ctp;
+
+c = coverage_im_eus.part_type, upshift, include=("C","I","O","D");
+
+instructions
+   delimiters "()";
+
+end

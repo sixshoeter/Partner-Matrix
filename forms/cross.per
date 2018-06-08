@@ -1,0 +1,35 @@
+database partners_na
+screen size 24 by 80
+{
+ceid                [f000      ]
+part_name           [f001                          ]
+                    [f002                          ]
+swita               [f003                ]
+spr                 [f004                ]
+zrep                [f005                ]
+pcr                 [f006                ]
+flash               [f007                ]
+pta                 [f008                ]
+
+alliance_bpr        [f010                ]
+alliance_ctp        [f011                ]
+
+updtime             [f009               ]
+}
+end
+tables
+cross
+attributes
+f000 = cross.ceid;
+f001 = cross.part_name[1,30];
+f002 = cross.part_name[31,60];
+f003 = cross.swita;
+f004 = cross.spr;
+f005 = cross.zrep;
+f006 = cross.pcr;
+f007 = cross.flash;
+f008 = cross.pta;
+f010 = cross.alliance_bpr;
+f011 = cross.alliance_ctp;
+f009 = cross.updtime;
+end

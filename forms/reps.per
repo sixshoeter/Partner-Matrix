@@ -1,0 +1,31 @@
+database partners_na
+screen size 24 by 80
+{
+
+
+IBM Rep Name (BDR/CTP/MGR): 
+       [f000                ]
+
+URL for IBM Faces
+       [f001                                              ]
+       [f001                                              ]
+       [f001                                              ]
+
+Type: [a1]
+
+}
+end
+
+tables
+   reps
+
+attributes
+f000 = reps.r_name, required;
+f001 = reps.r_link, wordwrap compress, required;
+a1 = reps.r_type, upshift, include=("GS", "GM", "CS","CT","MV","CA", "LS", "  "), autonext,
+     comments="GS:GSI Sales;GM:GSI Mgr; CS:C Sales,CT:C Tech,CA:C Arch,LS:Lab Svs,MV:Moved out";
+
+instructions
+delimiters "()";
+
+end

@@ -1,0 +1,15 @@
+database partners_na
+screen size 24 by 80
+{
+ig_brand            [a0]
+ig_order            [f001  ]
+ig_name             [f002                               ]
+}
+end
+tables
+ind_group
+attributes
+a0 = ind_group.ig_brand, upshift;
+f001 = ind_group.ig_order;
+f002 = ind_group.ig_name;
+end

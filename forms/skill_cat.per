@@ -1,0 +1,24 @@
+database partners_na
+screen size 24 by 80
+{
+c_brand             [a0]
+c_id                [f000  ]
+c_short             [f001      ]
+c_long              [f002                                              ]
+}
+end
+tables
+skill_cat
+brands
+skill
+
+attributes
+a0 = skill_cat.c_brand=brands.b_id, upshift, required, queryclear;
+f000 = skill_cat.c_id;
+f001 = skill_cat.c_short;
+f002 = skill_cat.c_long;
+
+instructions
+   delimiters "()"
+
+end

@@ -1,0 +1,22 @@
+database partners_na
+screen size 24 by 80
+{
+u_id                [a0]
+mgr_ord             [f000  ]
+mgr_type            [a]
+mgr_name            [f001                          ]
+mgr_title           [f004                                              ]
+mgr_scope           [f002                          ]
+                    [f002                          ]
+}
+end
+tables
+unit_mgrs
+attributes
+a0 = unit_mgrs.u_id, upshift;
+f000 = unit_mgrs.mgr_ord;
+a = unit_mgrs.mgr_type, upshift;
+f001 = unit_mgrs.mgr_name;
+f004 = unit_mgrs.mgr_title;
+f002 = unit_mgrs.mgr_scope, wordwrap compress;
+end

@@ -1,0 +1,45 @@
+database partners_na
+screen size 24 by 80
+{
+u_id                [a0]
+u_name              [f000                          ]
+u_ord               [f001  ]
+u_menu              [f002                          ]
+u_link              [f003                          ]
+                    [f004                          ]
+sales_mgr1          [f005                          ]
+sales_mgr1_scope    [f006                          ]
+                    [f007                          ]
+sales_mgr2          [f008                          ]
+sales_mgr2_scope    [f009                          ]
+                    [f010                          ]
+tech_mgr1           [f011                          ]
+tech_mgr1_scope     [f012                          ]
+                    [f013                          ]
+tech_mgr2           [f014                          ]
+tech_mgr2_scope     [f015                          ]
+                    [f016                          ]
+}
+end
+tables
+units
+attributes
+a0 = units.u_id;
+f000 = units.u_name;
+f001 = units.u_ord;
+f002 = units.u_menu;
+f003 = units.u_link[1,30];
+f004 = units.u_link[31,60];
+f005 = units.sales_mgr1;
+f006 = units.sales_mgr1_scope[1,30];
+f007 = units.sales_mgr1_scope[31,60];
+f008 = units.sales_mgr2;
+f009 = units.sales_mgr2_scope[1,30];
+f010 = units.sales_mgr2_scope[31,60];
+f011 = units.tech_mgr1;
+f012 = units.tech_mgr1_scope[1,30];
+f013 = units.tech_mgr1_scope[31,60];
+f014 = units.tech_mgr2;
+f015 = units.tech_mgr2_scope[1,30];
+f016 = units.tech_mgr2_scope[31,60];
+end

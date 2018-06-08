@@ -1,0 +1,368 @@
+database partners_na
+screen size 40 by 102
+{
+--- PARTNER INFORMATION -------------------------------------------------------------
+CEID:[p01       ] NAME:[p02                                                         ]
+ VAD:[a1        ] Headquarters:[b1] Segment:[c2] Reseller Code:[z] Lead:[y ] Tier:[w]
+--- ASSIGNMENTS -------------------------------------------------------------
+ IBM Brand Rep Name: [p03                 ]                           [ts1                ]
+   App Platform CTP: [p04ap               ]   Notes: [note1                                   ]
+    Integration CTP: [p04int              ]          [note1                                   ]
+Smarter Process CTP: [p04sp               ]          [note1                                   ]
+ Video Services CTP: [p04sm               ]
+    IT Serv Mgt CTP: [p04mf               ]
+                  URL: [p05                                               ]
+Partner World Profile: [p06                                               ]
+                       [p06                                               ]
+Partner Contact: [p08                           ]  Title: [p08a                                    ]
+          Phone: [p09                           ]  Email: [p10                                     ]
+Hunter? [j]   Other Focus Areas: 
+1:[p11                           ]2:[p12                           ]3:[p13                           ]
+--- DESCRIPTION -------------------------------------------------------------
+[p07                                                                                      ]
+[p07                                                                                      ]
+[p07                                                                                      ]
+[p07                                                                                      ]
+[p07                                                                                      ]
+[p07                                                                                      ]
+[p07                                                                                      ]
+[p07                                                                                      ]
+[p07                                                                                      ]
+[p07                                                                                      ]
+[p07                                                                                      ]
+[p07                                                                                      ]
+[p07                                                                                      ]
+[p07                                                                                      ]
+[p07                                                                                      ]
+[p07                                                                                      ]
+[p07                                                                                      ]
+}
+
+screen
+{
+--- PARTNER INFORMATION -------------------------------------------------------------
+	CEID: [p01       ] NAME: [p02                                                         ]
+REGION                          ENTERPRISE UNITS
+US West                     [a] Pacific Northwest
+US West                     [b] North California
+US West                     [c] Southwest & Rockies
+
+US Midwest                  [e] Northern Stars
+US Midwest                  [g] Plains
+US Midwest                  [h] Heartland
+US Midwest                  [i] Texas/New Mexico/Gulf
+
+US East                     [q] Mid-America
+US East                     [r] Ohio Valley
+US East                     [s] Southeast
+US East                     [t] Sunshine Belt
+
+US North                    [m] Northeast
+US North                    [l] Garden State
+US North                    [d] NY Metro
+
+US Mid-Atlantic             [n] Delaware Valley
+US Mid-Atlantic             [o] Potomac Valley
+US Mid-Atlantic             [p] Carolinas
+
+Canada                      [u] Canada
+Federal                     [x] Federal
+}
+
+screen
+{
+--- PARTNER INFORMATION -------------------------------------------------------------
+CEID: [p01       ] NAME: [p02                                                         ]
+
+-------------------------------------------------------------
+                               INDUSTRY
+-------------------------------------------------------------
+
+                    [m1] Energy & Utility
+                    [m2] Telecommunication
+                    [m3] Media & Entertainment
+                    [m4] Retail
+                    [m5] Wholesale Distribution
+                    [m6] Transportation
+                    [m7] Banking & Financial Market
+                    [m8] Insurance
+                    [m9] Manufacturing
+                    [mm] Healthcare & Lifescience
+                    [mn] Government
+                    [mo] CROSS-INDUSTRY
+}
+
+screen
+{
+--- PARTNER INFORMATION -------------------------------------------------------------
+CEID: [p01       ] NAME: [p02                                                         ]
+-------------------------------------------------------------
+            Application Platform TECHNICAL SKILLS            [ts2                ]
+-------------------------------------------------------------
+RUN SOLUTIONS
+( 1)[u0] Application Server Family
+( 2)[r0] WAS on z
+( 3)[f0] eXtreme Scale
+( 4)[x0] Pure Application
+( 5)[w0] CICS VUE
+( 6)[i0] TX Series
+
+BUILD SOLUTIONS/DEVOPS
+( 7)[j0] Collaborative Dev (Ratl Team Concert, Ratl Qualty Mgr, DOORS Next Gen)
+( 8)[g0] Analytics & Doc Gen (Ratl Pub Eng, Insight)
+( 9)[h0] Arch & Design (Ratl Design Mgr, Ratl SW Arch, Ratl Appl Dev)
+(10)[l0] Continuous Testing (Ratl Test Workbench, Test Virtualization Srvr)
+(11)[e0] Automated Testing (Ratl Functional Tester, Ratl Perf Tester)
+(12)[n0] Change & Config Mgmt (ClearCase, ClearQuest)
+(13)[o0] App Modernization (HATS, HIS, HACP, Asset Analyzer)
+(14)[v0] Compiler Modernization (C, C++, COBOL, Fortran, PL/I)
+(15)[m0] Dev Modernization (RDz, RDi, Ratl Business Dev, Ratl Dev for AIX/Linux)
+(16)[p0] Host Test Modernization (Ratl Dev & Test, RSA, Ratl Test Virt Server, RTW)
+(17)[k0] Build Mgmt (Build Forge)
+(18)[s0] Asset Mgmt (RAM)
+
+-------------------------------------------------------------------------------
+    3-TOP Skilled Partner, with multiple successful engagements
+    2-Skilled Partner, with successful engagements
+    1-Learning partner
+
+}
+screen
+{
+--- PARTNER INFORMATION -------------------------------------------------------------
+CEID: [p01       ] NAME: [p02                                                         ]
+------------------------------------------------------------------
+                          SUCCESS STORIES & REFERENCES (ADD ROWS)
+------------------------------------------------------------------
+
+ Title 
+[s01                                                                                       ]
+[s01                               ]
+
+ Link
+[s02                                                                                 ]
+[s02                                                                                 ]
+[s02                                                                                 ]
+
+
+}
+screen
+{
+--- PARTNER INFORMATION -------------------------------------------------------------
+CEID: [p01       ] NAME: [p02                                                         ]
+-------------------------------------------------------------
+                         ADDITIONAL CONTACTS
+-------------------------------------------------------------
+
+Partner Contact: [c08                           ]  Title: [c08a                                    ]
+          Phone: [c09                           ]  Email: [c10                                     ]
+
+          Region Focus: [c004                ]
+             EUS Focus: [c005                     ]
+
+}
+end
+
+tables
+   coverage_su
+   skills_s1
+   success_su
+   contacts_su
+   reps
+   reps2
+   reps3
+   reps4
+   reps5
+   reps6
+   vads
+   states
+   eus
+   eus2
+
+attributes
+p01 = coverage_su.ceid, downshift, queryclear, noupdate, required, default="";
+    = skills_s1.ceid, downshift, queryclear, noentry, noupdate, color=reverse;
+    = success_su.ceid, downshift, queryclear, noentry, noupdate, color=reverse;
+    = contacts_su.c_ceid, downshift, queryclear, noentry, noupdate, color=reverse;
+p02 = coverage_su.part_name, queryclear, required, color=reverse,
+      comments="Partner Name";
+a1   = coverage_su.vad=*vads.v_id, queryclear, default="",
+      comments="VAD";
+b1   = coverage_su.hq=*states.s_id, upshift, autonext, queryclear,
+      comments="HQ: State where partner is headquartered";
+c2   = coverage_su.part_type, upshift, include=("B","G","O","S"," "), autonext, required,
+      comments="Segment: (B)lue Core, (G)rowth, (O)pportunistic, (S)trategic";
+z   = coverage_su.reseller, upshift, include=("R","E","N","H","V"), default="R", autonext,
+      comments="Reseller Code: (R)eseller, (E)merging, (H)igh Value, (V)ad, (N)ot Reselling";
+note1   = coverage_su.note, wordwrap compress,
+      comments="Internal (to Coverage Team) Notes regarding this Partner";
+y   = coverage_su.lead, upshift, include=("S1","S2","S3","S4","S5"," ",""), autonext, 
+      comments="Technical Lead: BA, IM, EM ";
+w   = coverage_su.tier, autonext, include=(0,1,2,3),
+      comments="Partner is part of this Tier 0-3";
+p03 = coverage_su.ssr=*reps.r_name, queryclear, default="",
+      comments="IBM Channels Brand Rep";
+p04ap = coverage_su.ctp1=*reps2.r_name, queryclear, default="",
+      comments="IBM Channels TSS Rep (use single space to indicate empty)";
+p04int = coverage_su.ctp2=*reps3.r_name, queryclear, default="",
+      comments="IBM Channels TSS Rep (use single space to indicate empty)";
+p04sp = coverage_su.ctp3=*reps4.r_name, queryclear, default="",
+      comments="IBM Channels TSS Rep (use single space to indicate empty)";
+p04sm = coverage_su.ctp4=*reps5.r_name, queryclear, default="",
+      comments="IBM Channels TSS Rep (use single space to indicate empty)";
+p04mf = coverage_su.ctp5=*reps6.r_name, queryclear, default="",
+      comments="IBM Channels TSS Rep (use single space to indicate empty)";
+p05 = coverage_su.url,
+      comments="Partners Corporate URL";
+p06 = coverage_su.pwp, wordwrap compress,
+      comments="Partners Partners World Profile URL";
+p08 = coverage_su.p_name,
+      comments="Partner contact name for passing leads";
+p08a = coverage_su.p_title,
+      comments="Partner contact title";
+p09 = coverage_su.p_phone,
+      comments="Partner contact phone number (with area code)";
+p10 = coverage_su.p_email,
+      comments="Partner contact corporate email address";
+j   = coverage_su.hunter, upshift, autonext,
+      comments="Partner is a Hunter - going after white space";
+
+p11 = coverage_su.focus1, 
+      comments="Other focus areas of partner (e.g., Mobility, etc)";
+p12 = coverage_su.focus2, 
+      comments="Other focus areas of partner (e.g., Mobility, etc)";
+p13 = coverage_su.focus3, 
+      comments="Other focus areas of partner (e.g., Mobility, etc)";
+p07 = coverage_su.desc, wordwrap compress,
+      comments="Description about the partner - use <p> to separate paragraphs";
+
+
+a = coverage_su.eu_pacificnw, autonext, upshift, include=("Y","H"," ",""),
+    comments="If selling in this Enterprise Unit, use 'Y' - if HQ there, use 'H'";
+b = coverage_su.eu_northca, autonext, upshift, include=("Y","H"," ",""),
+    comments="If selling in this Enterprise Unit, use 'Y' - if HQ there, use 'H'";
+c = coverage_su.eu_southwest, autonext, upshift, include=("Y","H"," ",""),
+    comments="If selling in this Enterprise Unit, use 'Y' - if HQ there, use 'H'";
+e = coverage_su.eu_northern, autonext, upshift, include=("Y","H"," ",""),
+    comments="If selling in this Enterprise Unit, use 'Y' - if HQ there, use 'H'";
+g = coverage_su.eu_plains, autonext, upshift, include=("Y","H"," ",""),
+    comments="If selling in this Enterprise Unit, use 'Y' - if HQ there, use 'H'";
+h = coverage_su.eu_heartland, autonext, upshift, include=("Y","H"," ",""),
+    comments="If selling in this Enterprise Unit, use 'Y' - if HQ there, use 'H'";
+i = coverage_su.eu_texas, autonext, upshift, include=("Y","H"," ",""),
+    comments="If selling in this Enterprise Unit, use 'Y' - if HQ there, use 'H'";
+q = coverage_su.eu_midamerica, autonext, upshift, include=("Y","H"," ",""),
+    comments="If selling in this Enterprise Unit, use 'Y' - if HQ there, use 'H'";
+r = coverage_su.eu_ohio, autonext, upshift, include=("Y","H"," ",""),
+    comments="If selling in this Enterprise Unit, use 'Y' - if HQ there, use 'H'";
+s = coverage_su.eu_southeast, autonext, upshift, include=("Y","H"," ",""),
+    comments="If selling in this Enterprise Unit, use 'Y' - if HQ there, use 'H'";
+t = coverage_su.eu_sunshine, autonext, upshift, include=("Y","H"," ",""),
+    comments="If selling in this Enterprise Unit, use 'Y' - if HQ there, use 'H'";
+m = coverage_su.eu_northeast, autonext, upshift, include=("Y","H"," ",""),
+    comments="If selling in this Enterprise Unit, use 'Y' - if HQ there, use 'H'";
+l = coverage_su.eu_garden, autonext, upshift, include=("Y","H"," ",""),
+    comments="If selling in this Enterprise Unit, use 'Y' - if HQ there, use 'H'";
+d = coverage_su.eu_ny, autonext, upshift, include=("Y","H"," ",""),
+    comments="If selling in this Enterprise Unit, use 'Y' - if HQ there, use 'H'";
+n = coverage_su.eu_delaware, autonext, upshift, include=("Y","H"," ",""),
+    comments="If selling in this Enterprise Unit, use 'Y' - if HQ there, use 'H'";
+o = coverage_su.eu_potomac, autonext, upshift, include=("Y","H"," ",""),
+    comments="If selling in this Enterprise Unit, use 'Y' - if HQ there, use 'H'";
+p = coverage_su.eu_carolinas, autonext, upshift, include=("Y","H"," ",""),
+    comments="If selling in this Enterprise Unit, use 'Y' - if HQ there, use 'H'";
+u = coverage_su.eu_ca, autonext, upshift, include=("Y","H"," ",""),
+    comments="If selling in this Enterprise Unit, use 'Y' - if HQ there, use 'H'";
+x = coverage_su.eu_fed, autonext, upshift, include=("Y","H"," ",""),
+    comments="If selling in this Enterprise Unit, use 'Y' - if HQ there, use 'H'";
+
+m1 = coverage_su.ind_eu, autonext, upshift, include=("Y"," ",""),
+     comments="If this is an Industry focus, use 'Y'";
+m2 = coverage_su.ind_tel, autonext, upshift, include=("Y"," ",""),
+     comments="If this is an Industry focus, use 'Y'";
+m3 = coverage_su.ind_me, autonext, upshift, include=("Y"," ",""),
+     comments="If this is an Industry focus, use 'Y'";
+m4 = coverage_su.ind_ret, autonext, upshift, include=("Y"," ",""),
+     comments="If this is an Industry focus, use 'Y'";
+m5 = coverage_su.ind_wd, autonext, upshift, include=("Y"," ",""),
+     comments="If this is an Industry focus, use 'Y'";
+m6 = coverage_su.ind_trans, autonext, upshift, include=("Y"," ",""),
+     comments="If this is an Industry focus, use 'Y'";
+m7 = coverage_su.ind_bank, autonext, upshift, include=("Y"," ",""),
+     comments="If this is an Industry focus, use 'Y'";
+m8 = coverage_su.ind_ins, autonext, upshift, include=("Y"," ",""),
+     comments="If this is an Industry focus, use 'Y'";
+m9 = coverage_su.ind_mfg, autonext, upshift, include=("Y"," ",""),
+     comments="If this is an Industry focus, use 'Y'";
+mm = coverage_su.ind_hl, autonext, upshift, include=("Y"," ",""),
+     comments="If this is an Industry focus, use 'Y'";
+mn = coverage_su.ind_gov, autonext, upshift, include=("Y"," ",""),
+     comments="If this is an Industry focus, use 'Y'";
+mo = coverage_su.ind_cross, autonext, upshift, include=("Y"," ",""),
+     comments="If this is an Industry focus, use 'Y'";
+ts1 = coverage_su.updtime;
+
+u0 = skills_s1.skill_01, include=(null, 1, 2, 3), autonext;
+r0 = skills_s1.skill_02, include=(null, 1, 2, 3), autonext;
+f0 = skills_s1.skill_03, include=(null, 1, 2, 3), autonext;
+x0 = skills_s1.skill_04, include=(null, 1, 2, 3), autonext;
+w0 = skills_s1.skill_05, include=(null, 1, 2, 3), autonext;
+i0 = skills_s1.skill_06, include=(null, 1, 2, 3), autonext;
+j0 = skills_s1.skill_07, include=(null, 1, 2, 3), autonext;
+g0 = skills_s1.skill_08, include=(null, 1, 2, 3), autonext;
+h0 = skills_s1.skill_09, include=(null, 1, 2, 3), autonext;
+l0 = skills_s1.skill_10, include=(null, 1, 2, 3), autonext;
+e0 = skills_s1.skill_11, include=(null, 1, 2, 3), autonext;
+n0 = skills_s1.skill_12, include=(null, 1, 2, 3), autonext;
+o0 = skills_s1.skill_13, include=(null, 1, 2, 3), autonext;
+v0 = skills_s1.skill_14, include=(null, 1, 2, 3), autonext;
+m0 = skills_s1.skill_15, include=(null, 1, 2, 3), autonext;
+p0 = skills_s1.skill_16, include=(null, 1, 2, 3), autonext;
+k0 = skills_s1.skill_17, include=(null, 1, 2, 3), autonext;
+s0 = skills_s1.skill_18, include=(null, 1, 2, 3), autonext;
+ts2 = skills_s1.updtime;
+
+
+s01 = success_su.s_title, wordwrap compress,
+      comments="Short descriptive title for Success Story";
+s02 = success_su.s_link, wordwrap compress,
+      comments="URL that points to the Success Story";
+
+
+c08 = contacts_su.c_name,
+      comments="Partner contact name for passing leads";
+c08a = contacts_su.c_title,
+      comments="Partner contact title";
+c09 = contacts_su.c_phone,
+      comments="Partner contact phone number (with area code)";
+c10 = contacts_su.c_email,
+      comments="Partner contact corporate email address";
+c004 = contacts_su.e_region=*eus.e_region, default="<none>",
+      comments="Region Focus for Contact";
+c005 = contacts_su.e_name=*eus2.e_name, default="<none>",
+      comments="EU Focus for Contact";
+
+
+instructions
+   delimiters "  ";
+
+
+   coverage_su master of skills_s1
+   skills_s1 master of success_su
+   success_su master of contacts_su
+
+
+   after editadd editupdate of coverage_su
+      let ts1 = current
+
+   before editadd editupdate of coverage_su.updtime
+      nextfield = p02
+
+   after editadd editupdate of skills_s1
+      let ts2 = current
+
+   before editadd editupdate of skills_s1.updtime
+      nextfield = u0
+
+
+      end

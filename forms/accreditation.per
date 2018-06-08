@@ -1,0 +1,28 @@
+database partners_na
+screen size 24 by 80
+{
+
+Brand:  [a0][a0lk                          ]
+
+ CEID:  [f000      ]
+
+Accreditation Level:[f001      ]  in [f001a               ]
+
+     Date Achieved: [f002      ]
+}
+end
+tables
+   accreditation
+   brands
+   
+attributes
+a0 = accreditation.a_brand, required, upshift, lookup a0lk=brands.b_name joining *b_id;
+f000 = accreditation.ceid, required, downshift;
+f001 = accreditation.level;
+f001a = accreditation.target;
+f002 = accreditation.a_dt;
+
+instructions
+   delimiters "()";
+
+end

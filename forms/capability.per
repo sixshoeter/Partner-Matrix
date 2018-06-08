@@ -1,0 +1,17 @@
+database partners_na
+screen size 24 by 80
+{
+c_num               [f000  ]
+c_name              [f001                          ]
+c_desc              [f002                          ]
+                    [f003                          ]
+}
+end
+tables
+capability
+attributes
+f000 = capability.c_num;
+f001 = capability.c_name;
+f002 = capability.c_desc[1,30];
+f003 = capability.c_desc[31,60];
+end

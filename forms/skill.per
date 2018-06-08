@@ -1,0 +1,42 @@
+database partners_na
+screen size 24 by 80
+{
+\g---\g SKILL DEFINITION \g-----------------------------------------------------------\g
+
+     BRAND:[a0][a0lk                          ]
+
+  Category: [g]
+
+SORT ORDER: [f0]
+
+ DB COLUMN: [h ]
+
+Short Name: [f001                          ]
+
+Full Name:  [f002                                              ]
+            [f002                                              ]
+
+
+}
+end
+tables
+   skill
+   brands
+
+attributes
+a0 = skill.b_id, upshift, autonext, lookup a0lk=brands.b_name joining *brands.b_id;
+g  =   skill.c_id;
+f0   = skill.s_num, required, 
+       comments="Sort order with Brand";
+h    = skill.db_num, required, {noupdate,}
+       comments="Column Number within skills_XX table (1-20)";
+f001 = skill.s_name,
+       comments="Short Skill Name";
+f002 = skill.s_desc, wordwrap compress,
+       comments="Full Skill Description";
+
+instructions
+   delimiters "()"
+
+
+end

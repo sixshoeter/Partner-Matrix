@@ -1,0 +1,47 @@
+database partners_na
+screen size 30 by 80
+{
+fcast_id       [f000       ]
+cust_name      [f001                                                        ]
+
+fast_comment_type   [a]
+fcast_comment       [f002                                                     ]
+                    [f002                                                     ]
+                    [f002                                                     ]
+                    [f002                                                     ]
+                    [f002                                                     ]
+                    [f002                                                     ]
+                    [f002                                                     ]
+                    [f002                                                     ]
+                    [f002                                                     ]
+                    [f002                                                     ]
+                    [f002                                                     ]
+                    [f002                                                     ]
+                    [f002                                                     ]
+                    [f002                                                     ]
+                    [f002                                                     ]
+                    [f002                                                     ]
+                    [f002                                                     ]
+                    [f002                                                     ]
+updperson           [f012                                    ]
+updtime             [f011            ]
+}
+end
+tables
+fcast_au
+fcast_comments_au
+
+attributes
+f000 = fcast_au.fcast_id=*fcast_comments_au.fcast_id;
+f001 = fcast_au.cust_name;
+a = fcast_comments_au.fcast_comment_type, upshift;
+f002 = fcast_comments_au.fcast_comment, wordwrap compress;
+f012 = fcast_comments_au.updperson;
+f011 = fcast_comments_au.updtime, default=current;
+
+instructions
+   delimiters "()";
+
+   fcast_au master of fcast_comments_au;
+
+end

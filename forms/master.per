@@ -1,0 +1,57 @@
+database partners_na
+screen size 35 by 80
+{
+global_flg          [a]
+global_msg          [f000                                              ]
+top_msg             [f001                ]
+middle_msg          [f002                ]
+low_msg             [f003                ]
+education_pres      [f004                                    ]
+                    [f004                                    ]
+education_replay    [f006                                    ]
+                    [f006                                    ]
+                    [f006                                    ]
+      FAP Geo Note: [g01                                               ]
+                    [g01                                               ]
+                    [g01                                               ]
+   FAP Market Note: [g02                                               ]
+                    [g02                                               ]
+                    [g02                                               ]
+    FAP Skill Note: [g03                                               ]
+                    [g03                                               ]
+                    [g03                                               ]
+    FAP Other Note: [g04                                               ]
+                    [g04                                               ]
+                    [g04                                               ]
+ind_1               [f008                          ]
+ind_2               [f009                          ]
+ind_3               [f010                          ]
+ind_4               [f011                          ]
+updmsg              [f014                               ]
+PW URL   [f015                                                                  ]
+         [f015                                                                  ]
+Ver_Num             [f012  ]
+}
+end
+tables
+master
+attributes
+a = master.global_flg;
+f000 = master.global_msg;
+f001 = master.top_msg;
+f002 = master.middle_msg;
+f003 = master.low_msg;
+f004 = master.education_pres, wordwrap compress;
+f006 = master.education_replay, wordwrap compress;
+g01  = master.geo_note, wordwrap compress;
+g02  = master.market_note, wordwrap compress;
+g03  = master.skill_note, wordwrap compress;
+g04  = master.other_note, wordwrap compress;
+f008 = master.ind_1;
+f009 = master.ind_2;
+f010 = master.ind_3;
+f011 = master.ind_4;
+f014 = master.updmsg;
+f015 = master.pw_url, wordwrap compress;
+f012 = master.ver_num;
+end

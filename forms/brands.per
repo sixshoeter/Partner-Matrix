@@ -1,1 +1,38 @@
+database partners_na
+screen size 24 by 80
+{
 
+\g---\g BRANDS \g-------------------------------------------------------------\g
+
+BRAND: [a0]               SORT ORDER: [a2]
+
+ NAME: [f000                          ]
+
+ LINK: [f001                                                        ]
+
+Sales Mgr: [f003                          ]
+
+ Tech Mgr: [f004                          ]
+
+}
+end
+tables
+brands
+attributes
+a0 = brands.b_id, upshift, required, autonext, 
+       {include=("WS","IM","IS","LO","RA","SE", "TI","BA", "EM", "SC", "AU","SU"),}
+     comments="Brand: WS, IM, IS, LO, RA, SE, TI, BA, EC, SC, AU, SU";
+a2   = brands.b_ord, required;
+f000 = brands.b_name, required,
+       comments="Full name of the Brand";
+f001 = brands.b_link,
+       comments="Link to Brand Site (optional)";
+f003 = brands.sales_mgr,
+       comments="Brand Channels Sales Manager";
+f004 = brands.tech_mgr,
+       comments="Brand Channels Technical Manager";
+
+instructions
+   delimiters "()"
+
+end

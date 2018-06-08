@@ -1,0 +1,16 @@
+database partners_na
+screen size 24 by 80
+{
+e_iot               [f00]
+e_region            [f000                ]
+e_ord               [f001  ]
+}
+end
+tables
+region
+
+attributes
+f00  = region.e_iot, upshift;
+f000 = region.e_region;
+f001 = region.e_ord;
+end

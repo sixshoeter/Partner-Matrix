@@ -1,0 +1,28 @@
+database partners_na
+screen size 24 by 80
+{
+
+============================================
+              LAST LOAD DETAILS
+============================================
+tabname             [f000              ]
+desc                [f001                ]
+datetm              [f002               ]
+}
+end
+
+tables
+   lastload
+
+attributes
+f000 = lastload.tabname;
+f001 = lastload.desc;
+f002 = lastload.datetm;
+
+instructions
+   delimiters "()"
+
+   after editadd editupdate of lastload.tabname
+      let f002 = current
+
+end

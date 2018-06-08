@@ -1,0 +1,18 @@
+database partners_na
+screen size 24 by 80
+{
+b_id                [a0]
+b_sort              [a1]
+seg_lead            [f000                ]
+seg_desc            [f001                                  ]
+                    [f001                                 ]
+}
+end
+tables
+segment_leaders
+attributes
+a0 = segment_leaders.b_id, upshift;
+a1 = segment_leaders.b_sort;
+f000 = segment_leaders.seg_lead;
+f001 = segment_leaders.seg_desc, wordwrap compress;
+end

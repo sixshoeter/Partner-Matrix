@@ -1,0 +1,17 @@
+database partners_na
+screen size 24 by 80
+{
+ssmstep             [f000                                    ]
+ord                 [f001  ]
+screen_filter       [a]
+export_filter       [b]
+}
+end
+tables
+flu_ssmstep
+attributes
+f000 = flu_ssmstep.ssmstep;
+f001 = flu_ssmstep.ord;
+a = flu_ssmstep.screen_filter;
+b = flu_ssmstep.export_filter;
+end

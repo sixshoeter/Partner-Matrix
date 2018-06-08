@@ -1,0 +1,396 @@
+database partners_na
+screen size 48 by 85
+{
+BRAND: [a0]    Is Brand Active: [m][mlk  ]    Use Coverage Map: [z]
+
+PM URL: [u01                                               ]
+        [u01                                               ]
+Start Menu Name: [m001                          ]
+Tabs:Coverage[f000           ]Success[f003           ]Contact[f002           ]Extend[f004           ]
+Skill Table 1: [f001           ] #2:[f001b          ] #3:[f001c          ] 
+           #4: [f001d          ] #5: [f001e          ] Fcast Table: [f001f          ]
+	       Active Color:    [col1            ] In-Active Color: [col2            ]
+	       Text Color:      [col3            ]
+	       RevBox: [a][alk  ]  - Include the box with Revenue and People Certified
+	       RevFlg: [b][blk  ]  - Include the Revenue numbers (requires RevBox also)
+	       SplitFlg: [c][clk  ]  - Split out the different revenue numbers
+	       PplFlg: [d][dlk  ]  - Include the People Certified 
+	       CertFlg: [e][elk  ]  - Include number of certifications
+	       ShowBrands: [f][flk  ]  - Include the other brands associated with this partner
+	       ShowHVP: [g][glk  ]  - Show separate HVP page
+	       ShowTop: [h][hlk  ]  - Indicates whether to show the "Top" link leading to other brands
+	       EUSFlg: [i][ilk  ]  - EU (1) or BU (0) wording/links : RegionOnly (no EU): [y5]
+	       CTPPairFlg: [j][jlk  ]  - Require the TSS to be paired with the BDR for Coverage
+	       ShowVAPFlg: [k][klk  ]  - Show available VAP : ShowSolutions: [k1][k1lk  ]
+	       ShowCrossFlg: [l][llk  ]  - Include available Cross-Brand coverage each partner
+	       UseEUDrop: [n][nlk  ]  - Use the EU dropdown box for selection (vs. listing all)
+	       Production: [o][olk  ]  - Should this brand (and it's data) be considered "production"
+	       Skill Cat: [p][plk  ]  - Use Skill Categories for this brand
+	       Rotate Skills: [t][tlk  ]  - Show one Skill Category per Row for this brand
+	       More Contacts: [q][qlk  ]  - Use Additional Contacts for this brand
+	       EUcontacts: [r][rlk  ]  - Place region/EU specific contacts in the EU section
+	       IncludeSkills: [s][slk  ]  - Include Brand skills on main page
+	       OrderByRev: [u][ulk  ]  - Return Find-Partner results sorted by Revenue (not alpha)
+	       UNITMODE: [w][wlk  ]  - Run in UNIT mode
+	       ExpandBrands: [v][vlk  ]  - Use the expanded Brand concept
+	       SegmentLdrs: [x][xlk  ]  - Show Segment Leaders (only for Units)
+	       Use ACA as CTP5: [y][ylk  ]:OnlyShowACA[y1]:AlterCover[y2]:Hunter[y3]:Commercial[y4]
+  IgnoreSVP:[ja] ShowGSI:[jb] ShowCTPLabel:[jc]  ShowStorageCerts:[jd]  SearchVad:[je] SearchDesc: [jf]
+Instructions for Home Page:    CoverExtendST:[jg] PartnersWell:[jh] SCA:[ji]: Alliance:[jj] Ind:[jk]
+[ins1                                                                                                ]
+[ins1                                                                                                ]
+[ins1                                                                                                ]
+[ins1                                                                                                ]
+[ins1                                                                                                ]
+[ins1                                                                                                ]
+[ins1                                                                                                ]
+[ins1                                                                                                ]
+
+}
+end
+tables
+control
+brands
+
+attributes
+a0 = control.brand=*brands.b_id, upshift, autonext, queryclear;
+m = control.active_brand, upshift, autonext, include=("0","1");
+z  = control.cflg5, required, default="0", include=("0","1");
+mlk = displayonly type char;
+
+u01= control.url, wordwrap compress;
+m001 = control.menu_str, required;
+f000 = control.cov_tab, required;
+f003 = control.success_tab, required;
+f002 = control.cont_tab, required;
+f004 = control.coverextend_tab, required;
+f001 = control.skill_tab1, required;
+f001b = control.skill_tab2, required;
+f001c = control.skill_tab3, required;
+f001d = control.skill_tab4, required;
+f001e = control.skill_tab5, required;
+f001f = control.fcast_tab, required;
+col1 = control.active_color, downshift, required;
+col2 = control.inactive_color, downshift, required;
+col3 = control.text_color, downshift, required;
+
+a = control.revbox, upshift, autonext, include=("0","1");
+alk = displayonly type char;
+
+b = control.revflg, upshift, autonext, include=("0","1");
+blk = displayonly type char;
+
+c = control.splitflg, upshift, autonext, include=("0","1");
+clk = displayonly type char;
+
+d = control.pplflg, upshift, autonext, include=("0","1");
+dlk = displayonly type char;
+
+e = control.certflg, upshift, autonext, noupdate, noentry, default="0", include=("0","1");
+elk = displayonly type char;
+
+f = control.showbrands, upshift, autonext, include=("0","1");
+flk = displayonly type char;
+
+g = control.showhvp, upshift, autonext, include=("0","1");
+glk = displayonly type char;
+
+h = control.showtop, upshift, autonext, include=("0","1");
+hlk = displayonly type char;
+
+i = control.eusflg, upshift, autonext, include=("0","1");
+ilk = displayonly type char;
+
+y5 = control.regiononly, upshift, autonext, include=("0","1");
+
+j = control.ctppairflg, upshift, autonext, include=("0","1");
+jlk = displayonly type char;
+
+k = control.showvapflg, upshift, autonext, include=("0","1");
+klk = displayonly type char;
+
+k1 = control.showsolutions, upshift, autonext, include=("0","1");
+k1lk = displayonly type char;
+
+l = control.showcrossflg, upshift, autonext, include=("0","1");
+llk = displayonly type char;
+
+n = control.eudropbox, upshift, autonext, include=("0","1");
+nlk = displayonly type char;
+
+o = control.production, upshift, autonext, include=("0","1");
+olk = displayonly type char;
+
+p = control.skill_cat, upshift, autonext, include=("0","1");
+plk = displayonly type char;
+
+t = control.cflg3, upshift, autonext, include=("0","1");
+tlk = displayonly type char;
+
+q = control.add_contacts, upshift, autonext, include=("0","1");
+qlk = displayonly type char;
+
+r = control.cflg1, upshift, autonext, include=("0","1");
+rlk = displayonly type char;
+
+s = control.cflg2, upshift, autonext, include=("0","1");
+slk = displayonly type char;
+
+u = control.cflg4, upshift, autonext, include=("0","1");
+ulk = displayonly type char;
+
+w = control.unitmode, upshift, autonext, include=("0","1");
+wlk = displayonly type char;
+
+v = control.expandbrand, upshift, autonext, include=("0","1");
+vlk = displayonly type char;
+
+x = control.seg, upshift, autonext, include=("0","1");
+xlk = displayonly type char;
+
+y = control.useaca, upshift, autonext, include=("0","1");
+ylk = displayonly type char;
+
+y1 = control.onlyshowaca, upshift, autonext, include=("0","1");
+y2 = control.altercover, upshift, autonext, include=("0","1");
+y3 = control.showhunter, upshift, autonext, include=("0","1");
+y4 = control.showcommercial, upshift, autonext, include=("0","1");
+ja = control.nosvp, upshift, autonext, include=("0","1");
+jb = control.showgsi, upshift, autonext, include=("0","1");
+jc = control.showctplabel, upshift, autonext, include=("0","1");
+jd = control.showstoragecerts, upshift, autonext, include=("0","1");
+je = control.searchvad, upshift, autonext, include=("0","1");
+jf = control.searchdesc, upshift, autonext, include=("0","1");
+jg = control.showextend_st, upshift, autonext, include=("0","1");
+jh = control.showpartnerswell, upshift, autonext, include=("0","1");
+ji = control.showswita, upshift, autonext, include=("0","1");
+jj = control.showalliance, upshift, autonext, include=("0","1");
+jk = control.showindustry, upshift, autonext, include=("0","1");
+
+ins1 = control.instr, wordwrap compress;
+
+instructions
+delimiters "()"
+
+after editupdate editadd of control.revbox
+if( a = 0 )then
+let alk = "FALSE"
+else
+let alk = "TRUE"
+
+after editupdate editadd of control.revflg
+if( b = 0 )then
+let blk = "FALSE"
+else
+let blk = "TRUE"
+
+
+after editupdate editadd of control.splitflg
+if( c = 0 )then
+let clk = "FALSE"
+else
+let clk = "TRUE"
+
+
+after editupdate editadd of control.pplflg
+if( d = 0 )then
+let dlk = "FALSE"
+else
+let dlk = "TRUE"
+
+
+after editupdate editadd of control.certflg
+if( e = 0 )then
+let elk = "FALSE"
+else
+let elk = "TRUE"
+
+
+after editupdate editadd of control.showbrands
+if( f = 0 )then
+let flk = "FALSE"
+else
+let flk = "TRUE"
+
+
+after editupdate editadd of control.showhvp
+if( g = 0 )then
+let glk = "FALSE"
+else
+let glk = "TRUE"
+
+
+after editupdate editadd of control.showtop
+if( h = 0 )then
+let hlk = "FALSE"
+else
+let hlk = "TRUE"
+
+
+after editupdate editadd of control.eusflg
+if( i = 0 )then
+let ilk = "FALSE"
+else
+let ilk = "TRUE"
+
+
+after editupdate editadd of control.ctppairflg
+if( j = 0 )then
+let jlk = "FALSE"
+else
+let jlk = "TRUE"
+
+
+after editupdate editadd of control.showvapflg
+if( k = 0 )then
+let klk = "FALSE"
+else
+let klk = "TRUE"
+
+after editupdate editadd of control.showsolutions
+if( k1 = 0 )then
+let k1lk = "FALSE"
+else
+let k1lk = "TRUE"
+
+after editupdate editadd of control.showcrossflg
+if( l = 0 )then
+let llk = "FALSE"
+else
+let llk = "TRUE"
+
+
+
+
+after display of control
+if( a = 0 )then
+let alk = "FALSE"
+else
+let alk = "TRUE"
+
+if( b = 0 )then
+let blk = "FALSE"
+else
+let blk = "TRUE"
+
+
+if( c = 0 )then
+let clk = "FALSE"
+else
+let clk = "TRUE"
+
+
+if( d = 0 )then
+let dlk = "FALSE"
+else
+let dlk = "TRUE"
+
+
+if( e = 0 )then
+let elk = "FALSE"
+else
+let elk = "TRUE"
+
+
+if( f = 0 )then
+let flk = "FALSE"
+else
+let flk = "TRUE"
+
+
+if( g = 0 )then
+let glk = "FALSE"
+else
+let glk = "TRUE"
+
+
+if( h = 0 )then
+let hlk = "FALSE"
+else
+let hlk = "TRUE"
+
+
+if( i = 0 )then
+let ilk = "FALSE"
+else
+let ilk = "TRUE"
+
+
+if( j = 0 )then
+let jlk = "FALSE"
+else
+let jlk = "TRUE"
+
+
+if( k = 0 )then
+let klk = "FALSE"
+else
+let klk = "TRUE"
+
+if( l = 0 )then
+let llk = "FALSE"
+else
+let llk = "TRUE"
+
+if( n = 0 )then
+let nlk = "FALSE"
+else
+let nlk = "TRUE"
+
+if( o = 0 )then
+let olk = "FALSE"
+else
+let olk = "TRUE"
+
+if( p = 0 )then
+let plk = "FALSE"
+else
+let plk = "TRUE"
+
+if( q = 0 )then
+let qlk = "FALSE"
+else
+let qlk = "TRUE"
+
+if( r = 0 )then
+let rlk = "FALSE"
+else
+let rlk = "TRUE"
+
+if( s = 0 )then
+let slk = "FALSE"
+else
+let slk = "TRUE"
+
+if( t = 0 )then
+let tlk = "FALSE"
+else
+let tlk = "TRUE"
+
+if( u = 0 )then
+let ulk = "FALSE"
+else
+let ulk = "TRUE"
+
+if( v = 0 )then
+let vlk = "FALSE"
+else
+let vlk = "TRUE"
+
+if( x = 0 )then
+let xlk = "FALSE"
+else
+let xlk = "TRUE"
+
+if( y = 0 )then
+let ylk = "FALSE"
+else
+let ylk = "TRUE"
+
+if( w = 0 )then
+let wlk = "FALSE"
+else
+let wlk = "TRUE"
+
+
+end

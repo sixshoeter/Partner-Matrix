@@ -1,0 +1,24 @@
+database partners_na
+screen size 24 by 80
+{
+brand     [a0]
+BPR       [f000                ]
+email     [f001                          ]
+pin       [f002  ]
+
+CTP       [f003                ]
+CTP Email [f004                          ]
+CTP Pin   [f005  ]
+}
+end
+tables
+fcast_bpr
+attributes
+a0 = fcast_bpr.brand;
+f000 = fcast_bpr.ssr;
+f001 = fcast_bpr.email;
+f002 = fcast_bpr.pin;
+f003 = fcast_bpr.ctp;
+f004 = fcast_bpr.ctp_email;
+f005 = fcast_bpr.ctp_pin;
+end

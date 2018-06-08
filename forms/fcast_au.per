@@ -1,0 +1,89 @@
+database partners_na
+screen size 24 by 80
+{
+sc                  [a]
+cust_name           [f000                          ]
+                    [f001                          ]
+iot                 [f002           ]
+market              [f003                               ]
+industry            [f004                               ]
+country             [f005           ]
+brand_grp           [f006      ]
+brand               [f007                          ]
+prod_seg            [f008                                              ]
+prod_fam            [f009                          ]
+brand_desc          [f010                                    ]
+oppty_name          [f011                                              ]
+oppty_num           [f012      ]
+partner_led         [b]
+flow_code           [f013      ]
+close_qtr           [a0]
+exp_close_dt        [f014      ]
+bpr_fcast_stat      [f015       ]
+rev                 [f016          ]
+}
+screen
+{
+odds                [f017  ]
+ssm_step            [f018                                    ]
+ceid                [f019      ]
+part_name           [f020                          ]
+owning_org          [f021                ]
+iemm                [f022      ]
+report_to_sector    [f023      ]
+crm_rev_type        [f024                ]
+mgr                 [f025                                    ]
+ssr                 [f026                                    ]
+lead_pass           [c]
+slip_deal           [d]
+vad                 [f027      ]
+value_prop          [f028                          ]
+reason_act          [f029                ]
+final_prop          [f030                          ]
+bp_own              [e]
+updtime             [f031            ]
+}
+end
+tables
+fcast_au
+attributes
+a = fcast_au.sc;
+f000 = fcast_au.cust_name[1,30];
+f001 = fcast_au.cust_name[31,60];
+f002 = fcast_au.iot;
+f003 = fcast_au.market;
+f004 = fcast_au.industry;
+f005 = fcast_au.country;
+f006 = fcast_au.brand_grp;
+f007 = fcast_au.brand;
+f008 = fcast_au.prod_seg;
+f009 = fcast_au.prod_fam;
+f010 = fcast_au.brand_desc;
+f011 = fcast_au.oppty_name;
+f012 = fcast_au.oppty_num;
+b = fcast_au.partner_led;
+f013 = fcast_au.flow_code;
+a0 = fcast_au.close_qtr;
+f014 = fcast_au.exp_close_dt;
+f015 = fcast_au.bpr_fcast_stat;
+f016 = fcast_au.rev;
+
+f017 = fcast_au.odds;
+f018 = fcast_au.ssm_step;
+f019 = fcast_au.ceid;
+f020 = fcast_au.part_name;
+f021 = fcast_au.owning_org;
+f022 = fcast_au.iemm;
+f023 = fcast_au.report_to_sector;
+f024 = fcast_au.crm_rev_type;
+f025 = fcast_au.mgr;
+f026 = fcast_au.ssr;
+c = fcast_au.lead_pass;
+d = fcast_au.slip_deal;
+f027 = fcast_au.vad;
+f028 = fcast_au.value_prop;
+f029 = fcast_au.reason_act;
+f030 = fcast_au.final_prop;
+e = fcast_au.bp_own;
+f031 = fcast_au.updtime;
+end

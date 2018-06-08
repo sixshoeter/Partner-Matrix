@@ -1,0 +1,19 @@
+database partners_na
+screen size 24 by 80
+{
+vad_ceid            [f000      ]
+v_id                [f001      ]
+v_name              [f002                               ]
+v_link              [f003                          ]
+                    [f004                          ]
+}
+end
+tables
+vads
+attributes
+f000 = vads.vad_ceid;
+f001 = vads.v_id;
+f002 = vads.v_name;
+f003 = vads.v_link[1,30];
+f004 = vads.v_link[31,60];
+end

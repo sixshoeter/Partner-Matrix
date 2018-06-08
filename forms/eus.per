@@ -1,0 +1,34 @@
+database partners_na
+screen size 24 by 80
+{
+
+   Brand: [a0]
+  Region: [f000                ]
+ Sort ID: [f001  ]
+EUS Name: [f002                     ]
+     SSR: [f003                ]
+     TSS: [f004                ]
+     PCR: [f005                ]
+}
+end
+
+tables
+   eus
+   reps
+   reps2 
+   reps3 
+
+attributes
+a0 = eus.e_brand, upshift;
+f000 = eus.e_region;
+f001 = eus.e_id;
+f002 = eus.e_name;
+f003 = eus.e_ssr=*reps.r_name, queryclear;
+f004 = eus.e_ctp=*reps2.r_name, queryclear;
+f005 = eus.e_pcr=*reps3.r_name, queryclear;
+
+
+instructions
+   delimiters "()"
+
+end

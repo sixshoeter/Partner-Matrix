@@ -1,0 +1,21 @@
+database partners_na
+screen size 24 by 80
+{
+Unit                [a0]
+Brand               [a1]
+Letter              [a]
+Order to Display    [a2]
+Order by CTP Column [a3]
+        Description [a4                  ]
+}
+end
+tables
+unit_brand
+attributes
+a0 = unit_brand.u_id, upshift;
+a1 = unit_brand.b_id, upshift;
+a  = unit_brand.ltr, downshift;
+a2 = unit_brand.ord;
+a3 = unit_brand.ordctp; 
+a4 = unit_brand.desc; 
+end

@@ -1,0 +1,39 @@
+database partners_na
+screen size 24 by 80
+{
+
+              Brand: [a0]
+Brand Name in Certs: [a1   ]
+
+}
+
+screen
+{
+
+              Brand: [a0]
+Brand Name in Certs: [a1   ]
+                RAG: [a2                                      ]
+
+}
+end
+
+tables
+   brand_certs_det
+   brand_certs
+   brands
+
+attributes
+a0 = brand_certs.b_id=*brands.b_id, upshift, required, autonext, queryclear;
+   = brand_certs_det.b_id, queryclear;
+a1 = brand_certs.bc_id, upshift, required, autonext, queryclear;
+   = brand_certs_det.bc_id;
+
+a2 = brand_certs_det.rag;
+
+instructions
+   delimiters "()"
+
+   composites <brand_certs.b_id, brand_certs.bc_id> * <brand_certs_det.b_id, brand_certs_det.bc_id>
+   brand_certs master of brand_certs_det
+
+end

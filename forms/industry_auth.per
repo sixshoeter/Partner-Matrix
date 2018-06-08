@@ -1,0 +1,16 @@
+database partners_na
+screen size 24 by 80
+{
+ia_id               [f000  ]
+ia_short            [f001                ]
+ia_desc             [f002                          ]
+                    [f002                          ]
+}
+end
+tables
+industry_auth
+attributes
+f000 = industry_auth.ia_id;
+f001 = industry_auth.ia_short;
+f002 = industry_auth.ia_desc, wordwrap compress;
+end
